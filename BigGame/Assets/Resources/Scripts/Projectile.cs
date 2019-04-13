@@ -17,7 +17,7 @@ public class Projectile : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Destroy(gameObject, lifeTime);
-        /*
+        
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
         if (hitInfo.collider != null)
         {
@@ -27,7 +27,7 @@ public class Projectile : MonoBehaviour {
             }
             Destroy(gameObject);
         }
-        */
+        
 
         transform.Translate(Vector3.up * speed * Time.deltaTime);
     }
