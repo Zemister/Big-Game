@@ -1,0 +1,83 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BasicMovement : MonoBehaviour {
+
+    public Animator animator;
+
+    public Texture2D cursorTexture;
+    private CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
+
+    public float speed;
+
+    private float xInput, yInput;
+    private bool isMoving;
+
+    public Transform projectilePrefab;
+    public Transform shotPoint;
+    public LayerMask whatNotToHit;
+    private float timeBetweenShots;
+    public float startTimeBetweenShots;
+
+    void Start()
+    {
+        //var cursor = Resources.Load<Texture2D>("Graphics/Cursors/cursor2.png");
+        Cursor.visible = true;
+        //crossHair = cursor;
+        animator = GetComponent<Animator>();
+        speed = 1;
+        isMoving = false;
+    }
+
+	// Update is called once per frame
+	void Update () {
+
+        AimAndShoot();
+
+        // Get Input
+        xInput = Input.GetAxisRaw("Horizontal");
+        yInput = Input.GetAxisRaw("Vertical");
+
+        // If isMoving, move with vector
+        isMoving = (xInput != 0 || yInput != 0);
+
+        if (isMoving)
+        {
+            var movement = new Vector3(xInput, yInput, 0.0f);
+            transform.position += movement * speed * Time.deltaTime;
+            animator.SetFloat("xInput", xInput);
+            animator.SetFloat("yInput", yInput);
+        }
+
+        animator.SetBool("isMoving", isMoving);
+	}
+
+    private void AimAndShoot()
+    {
+        //Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+        Vector2 mousePosition = new Vector2 (Camera.main.ScreenToWorldPoint (Input.mousePosition).x, Camera.main.ScreenToWorldPoint (Input.mousePosition).y);
+        float xDirection = (mousePosition.x - shotPoint.position.x);
+        float yDirection = (mousePosition.y - shotPoint.position.y);
+
+        if (timeBetweenShots <= 0)
+        {
+            if (Input.GetButton("Fire1"))
+            {
+                animator.SetBool("isAttacking", true);
+                Instantiate(projectilePrefab, shotPoint.position, shotPoint.rotation);
+                animator.SetFloat("xAim", xDirection);
+                animator.SetFloat("yAim", yDirection);
+                timeBetweenShots = startTimeBetweenShots;
+            } else
+            {
+                animator.SetBool("isAttacking", false);
+            }
+        }
+        else
+        {
+            timeBetweenShots -= Time.deltaTime;
+        }
+    }
+}
