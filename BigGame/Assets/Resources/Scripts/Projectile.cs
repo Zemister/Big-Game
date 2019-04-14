@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour {
     //Range of projectile is decided by speed and lifetime
     public float projectileSpeed;
     public float lifeTime;
+    public int damage = 1;
 
     //will decide what projectile can and can't go through
     public LayerMask whatIsSolid;
@@ -23,8 +24,12 @@ public class Projectile : MonoBehaviour {
     //Make Enemies a trigger and Projectiles a Rigidbody2D
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        Debug.Log(hitInfo.name);
-        Destroy(gameObject);
+        Enemy enemy = hitInfo.GetComponent<Enemy>();
+        if (hitInfo.tag == "Enemy")
+        {
+            enemy.TakeDamage(damage);
+            Destroy(gameObject);
+        }
     }
 
     //If decide to switch from boxcolliders to raycast use this code in the Update() function
