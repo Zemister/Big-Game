@@ -12,7 +12,7 @@ public class FloatingDamageNumbers : MonoBehaviour
     
     void Update()
     {
-        displayNumber.text = "" + damageNumber;
+        displayNumber.text = "-" + damageNumber;
         transform.position = new Vector2(transform.position.x, transform.position.y + (moveSpeed * Time.deltaTime));
 
         timeToDestroy -= Time.deltaTime;

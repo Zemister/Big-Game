@@ -7,6 +7,8 @@ public class Projectile : MonoBehaviour {
     //Range of projectile is decided by speed and lifetime
     public float projectileSpeed;
     public float lifeTime;
+    public float offsetX;
+    public float offsetY;
     public int damage = 1;
 
     public Transform damageNumber;
@@ -27,11 +29,18 @@ public class Projectile : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         Enemy enemy = hitInfo.GetComponent<Enemy>();
-        if (hitInfo.tag == "Enemy")
+        if (hitInfo.gameObject.tag == "Enemy")
         {
+            GameObject enemyPosition = hitInfo.gameObject;
             enemy.TakeDamage(damage);
-            //var clone = (Transform) Instantiate(damageNumber, transform.position, Quaternion.Euler (Vector3.zero));
-            //clone.GetComponent<FloatingDamageNumbers>().damageNumber = damage;
+
+            var textPositionX = enemyPosition.transform.position.x + offsetX;
+            var textPositionY = enemyPosition.transform.position.y + offsetY;
+            var textPosition = new Vector2(textPositionX, textPositionY);
+
+            var clone = (Transform) Instantiate(damageNumber, textPosition, Quaternion.Euler(Vector3.zero));
+            clone.GetComponent<FloatingDamageNumbers>().damageNumber = damage;
+
             Destroy(gameObject);
         }
         if (hitInfo.tag == "Environment")
