@@ -4,31 +4,44 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour {
 
-    public float speed;
+    //Range of projectile is decided by speed and lifetime
+    public float projectileSpeed;
     public float lifeTime;
-    public float distance;
+    public int damage = 1;
+
+    //will decide what projectile can and can't go through
     public LayerMask whatIsSolid;
 
-	// Use this for initialization
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
         Destroy(gameObject, lifeTime);
-        
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
-        if (hitInfo.collider != null)
+    }
+
+	void Update () {
+        //Movespeed of projectile
+        transform.Translate(Vector3.up * projectileSpeed * Time.deltaTime);
+    }
+
+    //Make Enemies a trigger and Projectiles a Rigidbody2D
+    void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        Enemy enemy = hitInfo.GetComponent<Enemy>();
+        if (hitInfo.tag == "Enemy")
         {
-            if (hitInfo.collider.CompareTag("Enemy"))
-            {
-                Debug.Log("Enemy Must Take Damage!");
-            }
+            enemy.TakeDamage(damage);
             Destroy(gameObject);
         }
-        
-
-        transform.Translate(Vector3.up * speed * Time.deltaTime);
     }
+
+    //If decide to switch from boxcolliders to raycast use this code in the Update() function
+    /*
+    RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
+    if (hitInfo.collider != null)
+    {
+        if (hitInfo.collider.CompareTag("Enemy"))
+        {
+            Debug.Log("Enemy Must Take Damage!");
+        }
+        Destroy(gameObject);
+    }
+    */
 }

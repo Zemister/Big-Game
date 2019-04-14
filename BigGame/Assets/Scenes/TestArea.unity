@@ -170,7 +170,8 @@ GameObject:
   - component: {fileID: 427825207}
   - component: {fileID: 427825210}
   - component: {fileID: 427825211}
-  m_Layer: 0
+  - component: {fileID: 427825212}
+  m_Layer: 10
   m_Name: Hero
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -192,14 +193,11 @@ MonoBehaviour:
   animator: {fileID: 427825210}
   cursorTexture: {fileID: 2800000, guid: 231f57c9e20d3d54d98b0e17cac72abf, type: 3}
   hotSpot: {x: 8, y: 8}
-  speed: 0.18
+  playerSpeed: 1
   projectilePrefab: {fileID: 4158167666953370, guid: 8c969416e6af57b4186bba9a07d7fcf1,
     type: 3}
   shotPoint: {fileID: 1920263705}
-  whatNotToHit:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  startTimeBetweenShots: 0.25
+  startTimeBetweenShots: 0.15
 --- !u!212 &427825208
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -235,7 +233,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1242645071
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300008, guid: 9c793ffb519dcdd438fb5ce4d783e692, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -290,7 +288,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427825206}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -302,7 +300,33 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!61 &427825212
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427825206}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0007598847, y: -0.0053192377}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.14024279, y: 0.14936152}
+  m_EdgeRadius: 0
 --- !u!1 &723624951
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,6 +338,9 @@ GameObject:
   - component: {fileID: 723624954}
   - component: {fileID: 723624953}
   - component: {fileID: 723624952}
+  - component: {fileID: 723624955}
+  - component: {fileID: 723624956}
+  - component: {fileID: 723624957}
   m_Layer: 8
   m_Name: testDummy
   m_TagString: Enemy
@@ -331,7 +358,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.005510688, y: 0}
@@ -382,7 +409,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 905367113
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 547803af28300cd43bdd7cc20d6e46b9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -405,10 +432,64 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.209, y: 0.173, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1417153330}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!50 &723624955
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723624951}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &723624956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723624951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1502beae13ccd3e47a377c7f3903d896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotPoint: {fileID: 1417153330}
+  projectilePrefab: {fileID: 1029333634003040661, guid: 3b107632d2af1cb458b9a7a3f2d191a8,
+    type: 3}
+  startTimeBetweenShots: 0.5
+--- !u!114 &723624957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723624951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c208208d0dc15d44be375e3a57e90a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+>>>>>>> 17e23730420214f35fe57748729372d27d4a39e7
 --- !u!1 &1311740617
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,7 +596,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 427825206}
   offset: {x: 0, y: 0, z: -1}
+<<<<<<< HEAD
 --- !u!1 &1469710897
+=======
+--- !u!1 &1417153329
+>>>>>>> 17e23730420214f35fe57748729372d27d4a39e7
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -523,22 +608,33 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1469710898}
   - component: {fileID: 1469710900}
   - component: {fileID: 1469710899}
   m_Layer: 0
   m_Name: Tilemap_Base
+=======
+  - component: {fileID: 1417153330}
+  m_Layer: 0
+  m_Name: Enemy Shot Point
+>>>>>>> 17e23730420214f35fe57748729372d27d4a39e7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &1469710898
+=======
+--- !u!4 &1417153330
+>>>>>>> 17e23730420214f35fe57748729372d27d4a39e7
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1469710897}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -7213,6 +7309,16 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+=======
+  m_GameObject: {fileID: 1417153329}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.03, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 723624954}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> 17e23730420214f35fe57748729372d27d4a39e7
 --- !u!1 &1920263704
 GameObject:
   m_ObjectHideFlags: 0
