@@ -29,5 +29,9 @@ public class EnemyProjectile : MonoBehaviour {
             Debug.Log("Should damage: " + hitInfo.name);
             Destroy(gameObject);
         }
+        if (hitInfo.tag == "Environment")
+        {
+            Destroy(gameObject);
+        }
     }
 }

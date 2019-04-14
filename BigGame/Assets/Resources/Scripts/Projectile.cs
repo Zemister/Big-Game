@@ -30,6 +30,10 @@ public class Projectile : MonoBehaviour {
             enemy.TakeDamage(damage);
             Destroy(gameObject);
         }
+        if (hitInfo.tag == "Environment")
+        {
+            Destroy(gameObject);
+        }
     }
 
     //If decide to switch from boxcolliders to raycast use this code in the Update() function
