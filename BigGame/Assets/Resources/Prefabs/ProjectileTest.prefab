@@ -95,7 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 1.4
   lifeTime: 1
-  damage: 20
+  damage: 1
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 768
