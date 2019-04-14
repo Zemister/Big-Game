@@ -7,6 +7,7 @@ public class EnemyProjectile : MonoBehaviour {
     //Range of projectile is decided by speed and lifetime
     public float projectileSpeed;
     public float lifeTime;
+    public int damage = 1;
 
     //will decide what projectile can and can't go through
     public LayerMask whatIsSolid;
@@ -24,9 +25,10 @@ public class EnemyProjectile : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
+        Player player = hitInfo.GetComponent<Player>();
         if (hitInfo.tag == "Player")
         {
-            Debug.Log("Should damage: " + hitInfo.name);
+            player.TakeDamage(damage);
             Destroy(gameObject);
         }
         if (hitInfo.tag == "Environment")

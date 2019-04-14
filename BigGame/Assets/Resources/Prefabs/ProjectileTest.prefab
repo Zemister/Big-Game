@@ -97,6 +97,8 @@ MonoBehaviour:
   projectileSpeed: 1.4
   lifeTime: 1
   damage: 1
+  damageNumber: {fileID: 2037073811990691978, guid: be94adffa807f5948878103e0810fe87,
+    type: 3}
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 768

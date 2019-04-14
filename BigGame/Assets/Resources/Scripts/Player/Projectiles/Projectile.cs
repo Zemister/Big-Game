@@ -9,6 +9,8 @@ public class Projectile : MonoBehaviour {
     public float lifeTime;
     public int damage = 1;
 
+    public Transform damageNumber;
+
     //will decide what projectile can and can't go through
     public LayerMask whatIsSolid;
 
@@ -28,6 +30,8 @@ public class Projectile : MonoBehaviour {
         if (hitInfo.tag == "Enemy")
         {
             enemy.TakeDamage(damage);
+            //var clone = (Transform) Instantiate(damageNumber, transform.position, Quaternion.Euler (Vector3.zero));
+            //clone.GetComponent<FloatingDamageNumbers>().damageNumber = damage;
             Destroy(gameObject);
         }
         if (hitInfo.tag == "Environment")
