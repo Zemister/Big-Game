@@ -13,6 +13,9 @@ public class EnemyProjectile : MonoBehaviour {
 
     public Transform damageNumber;
 
+    public bool canPiercePlayers;
+    public bool canPierceWalls;
+
     //will decide what projectile can and can't go through
     public LayerMask whatIsSolid;
 
@@ -41,12 +44,17 @@ public class EnemyProjectile : MonoBehaviour {
 
             var clone = (Transform)Instantiate(damageNumber, textPosition, Quaternion.Euler(Vector3.zero));
             clone.GetComponent<FloatingDamageNumbers>().damageNumber = damage;
-
-            Destroy(gameObject);
+            if (!canPiercePlayers)
+            {
+                Destroy(gameObject);
+            }
         }
         if (hitInfo.tag == "Environment")
         {
-            Destroy(gameObject);
+            if (!canPierceWalls)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

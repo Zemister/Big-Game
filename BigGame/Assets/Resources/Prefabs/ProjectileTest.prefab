@@ -101,6 +101,8 @@ MonoBehaviour:
   damage: 100
   damageNumber: {fileID: 2635622989054232504, guid: 20109861c24d2cf4ba9394b965f338d7,
     type: 3}
+  canPierceEnemies: 0
+  canPierceWalls: 0
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 768
