@@ -9584,8 +9584,8 @@ GameObject:
   - component: {fileID: 1487010629}
   - component: {fileID: 1487010628}
   - component: {fileID: 1487010630}
-  - component: {fileID: 1487010632}
   - component: {fileID: 1487010631}
+  - component: {fileID: 1487010632}
   m_Layer: 8
   m_Name: enemy
   m_TagString: Enemy
@@ -9689,8 +9689,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &1487010632
-BoxCollider2D:
+--- !u!58 &1487010632
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9703,18 +9703,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.74968576, y: 0.74010026}
-  m_EdgeRadius: 0
+  m_Radius: 0.30589548
 --- !u!1 &1771333435
 GameObject:
   m_ObjectHideFlags: 0
@@ -9767,7 +9757,7 @@ MonoBehaviour:
   repathRate: 0.4
   canSearch: 1
   canMove: 1
-  maxSpeed: 1
+  maxSpeed: 1.5
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
@@ -9778,13 +9768,13 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.33
+  slowdownDistance: 0.27
   pickNextWaypointDist: 0.025
-  endReachedDistance: 0.54
+  endReachedDistance: 0.49
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
-  constrainInsideGraph: 1
+  constrainInsideGraph: 0
 --- !u!114 &1771333438
 MonoBehaviour:
   m_ObjectHideFlags: 0
