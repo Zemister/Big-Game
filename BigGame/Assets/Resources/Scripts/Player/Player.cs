@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int health = 1;
+    public int playerHealth = 1;
+    public int playerMaxHealth = 1;
+
+    void Start()
+    {
+        playerHealth = playerMaxHealth;
+    }
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        playerHealth -= damage;
 
-        if (health <= 0)
+        if (playerHealth <= 0)
         {
             Die();
         }
@@ -18,6 +24,6 @@ public class Player : MonoBehaviour
 
     void Die()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

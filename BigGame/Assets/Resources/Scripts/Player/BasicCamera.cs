@@ -6,8 +6,22 @@ public class BasicCamera : MonoBehaviour {
 
     public GameObject target;
     public Vector3 offset = new Vector3(0, 0, -1);
+
+    private static bool cameraExists;
 	
-	// Update is called once per frame
+	void Start()
+    {
+        if (!cameraExists)
+        {
+            cameraExists = true;
+            DontDestroyOnLoad(transform.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
 	void Update () {
 		if (target)
         {

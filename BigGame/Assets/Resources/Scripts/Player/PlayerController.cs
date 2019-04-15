@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicMovement : MonoBehaviour {
+public class PlayerController : MonoBehaviour {
 
     public Animator animator;
+    private Rigidbody2D body;
 
     public Texture2D cursorTexture;
     private CursorMode cursorMode = CursorMode.Auto;
@@ -15,20 +16,32 @@ public class BasicMovement : MonoBehaviour {
     private float xInput, yInput;
     private bool isMoving;
 
+    private static bool playerExists;
+
     public Transform projectilePrefab;
 
     public Transform shotPoint;
     private float xAim, yAim;
 
     //Attack speed variables
-    private float timeBetweenShots;
-    public float startTimeBetweenShots;
+    private float attackSpeedCounter;
+    public float attackSpeed;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        body = GetComponent<Rigidbody2D>();
         Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
         isMoving = false;
+
+        if (!playerExists)
+        {
+            playerExists = true;
+            DontDestroyOnLoad(transform.gameObject);
+        } else
+        {
+            Destroy(gameObject);
+        }
     }
 
 	void Update () {
@@ -46,11 +59,14 @@ public class BasicMovement : MonoBehaviour {
         isMoving = (xInput != 0 || yInput != 0);
         if (isMoving)
         {
-            var movement = new Vector3(xInput, yInput, 0.0f);
-            transform.position += movement * playerSpeed * Time.deltaTime;
+            body.velocity = new Vector2(xInput * playerSpeed, yInput * playerSpeed);
             animator.SetFloat("xInput", xInput);
             animator.SetFloat("yInput", yInput);
+        } else
+        {
+            body.velocity = Vector2.zero;
         }
+
         animator.SetBool("isMoving", isMoving);
     }
 
@@ -64,7 +80,7 @@ public class BasicMovement : MonoBehaviour {
         //Move shotPoint in front of character
 
         //Fire with attack speed control
-        if (timeBetweenShots <= 0)
+        if (attackSpeedCounter <= 0)
         {
             if (Input.GetButton("Fire1"))
             {
@@ -74,7 +90,7 @@ public class BasicMovement : MonoBehaviour {
                 animator.SetFloat("xAim", xDirection);
                 animator.SetFloat("yAim", yDirection);
 
-                timeBetweenShots = startTimeBetweenShots;
+                attackSpeedCounter = attackSpeed;
             } else
             {
                 animator.SetBool("isAttacking", false);
@@ -82,7 +98,7 @@ public class BasicMovement : MonoBehaviour {
         }
         else
         {
-            timeBetweenShots -= Time.deltaTime;
+            attackSpeedCounter -= Time.deltaTime;
         }
     }
 }
