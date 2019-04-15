@@ -2773,7 +2773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACAn+sajZSRXQIAAAAFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMty4jAQ/BVK5yVlOwTI3nYdQvaQkAq7lYsvwhpjFbLk0iM8Uvz7jmSDHeeEmG7NdM+M/Em4NDXkVuml5uxZMSA/R8SfyY9RBz7BgW6VXPMTXDjvnNnSk2jgvFHLFcZjf82oCqzm+S+5FZ4cYdBJXihdLdgWUmWswXBBhQGEtLL+tsTQ54gc8Gd8768c8ZTM/OmEp/todMZjDtKC7qgX4oXWsJzMBa1qYF5yR5625GkgSbTS4tFN4nMrIbhplRB7rIPTlNbGoQ8kME7RWSjvjZbAt6X1KvuXV0VhwLaSND0+cI0NarKS36rpWkXNrtH1QYXzde7iJKhqkj5/w8dxgAutqqdL3TjyNWzJ890bPebU2F5b++GHr8Kd3FOxoxsB7yXIF7XUykmGoNXOX3UGkofu79VaWkK+6+KN1EHQ1d+Hk9zczifxfHo7XYyjWTspb+gcWnFIBa82YQyTJrAWKjQ/7AFoHNQfVB+2xLR5Meol/TPwl27769QCj1wbi1BrWXqtG+W0p5JFaKC35myqtIQQbh3UIKmwx1dMY4fzHGC9sgPkkfqH0xZvsct7GFwJ4Y4fRQPoVe2vkzOl2j+DKVfOCi77yTzygo1KlZTNvpkB6u+tnS5oDp3ZrePs66KRyZzdT2EWTYpoEse3yXgzp1FEKYW7OEruZhMSNpFLNErFa6O07Q+OTXbJJW7d5YMyWmpah91nmu6X/FSpXs+5LNQ61wBy1WS4CgeNRfCVsgXj2KE1WMtlGDj5zIhQ+Q5Ydk2UBaeLg9U067JkpOYfyvpIRtLwBcnImZz/A1BLAwQUAAAICAAAgJ/rPVQHymwAAAB3AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9Iz11FQSi9KLMgoBgoYgjilmSkgdrSSiUWKpVmquYFJmoGJoaGxkW6SRaKBQWJiYqqpoYGRqbmJUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACAn+sajZSRXQIAAAAFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACAn+s9VAfKbAAAAHcAAAAJACQAAAAAAAAAAAAAAKoCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAYQMAAAAA
+    dataString: UEsDBBQAAAgIAACAn+uMfzWQXQIAAAEFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMty4jAQ/BVK5yUlEwJkb7sOIXvIo8Ju5eKLsMZYhSy59AiQFP++I9lgxzkhplsz3TMjfxKhbA2502ZlBH/UHMjPEQln8mPUgQ9wYFut1uIDzpw3wV0ZSCxyXpkTGuNJuGZ1Bc6I/JfaykCmGPRKFNpUS76FVFtnMVwwaQEho124rTD0OSIH/BnfhitHPE3m4fSBp1s6OuExB+XAdNQz8UxrWF7lklU18CC5I89a8iySFFppcXpFA5ZrKYVtpRB3rKPVlNXWoxEkcMHQWqwfnJYgtqULMvuXn4vCgms1GXa8EwY71GQlv3XTtorZXSPsnUkf6twkkyirSfr4DR8nES6Mrh7OdRMaarhS5LtXdsyZdb2+9sN3X4V7tWdyxzYS3kpQT3pltFccQWd8uOotTO66vxdraQn5ros3UgdBX3+fzuTqejFNFrPr2XJM5+2ogqFTbMUhlaLaxDlMm8Ba6tj8uAhgcFJ/UH1cE9vmxWiQ9M/CX7bt71ML3AtjHUKtZRW0brQ3gUqWsYHBmnepNgpiuHVQg2LSHV8wjRvOc4D1yg6QexZeTlu8xc4PYnAlhjs+pQPoRe8vk7Ol3j+CLZ+9k0L1kwXkCRuVaqWafbMDNNxbe1OwHDqzWy/410Uj0wW/ncGcTgs6TZLryXizYJQyxuAmoZOb+ZTETRQKjTL50iht+4NjU11yhVt3/qKMVobVcfe5YfuV+Kh0r+dCFXqdGwD13GS4CAeDRfCZ8iUX2KE1OCdUHDj5zIjU+Q54dkmURafLgzMs67JkpBbv2oVIRtL4CcnIiZz+A1BLAwQUAAAICAAAgJ/rPVQHymwAAAB3AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9Iz11FQSi9KLMgoBgoYgjilmSkgdrSSiUWKpVmquYFJmoGJoaGxkW6SRaKBQWJiYqqpoYGRqbmJUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACAn+uMfzWQXQIAAAEFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACAn+s9VAfKbAAAAHcAAAAJACQAAAAAAAAAAAAAAKoCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAYQMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -9713,7 +9713,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.87258255, y: 0.74010026}
+  m_Size: {x: 0.74968576, y: 0.74010026}
   m_EdgeRadius: 0
 --- !u!1 &1771333435
 GameObject:
@@ -9762,13 +9762,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 2
-  radius: 0.5
+  radius: 0.75
   height: 0.01
-  repathRate: 0.5
+  repathRate: 0.4
   canSearch: 1
   canMove: 1
-  maxSpeed: 0.2
-  gravity: {x: NaN, y: NaN, z: NaN}
+  maxSpeed: 1
+  gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -9778,12 +9778,12 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.6
-  pickNextWaypointDist: 0.71
-  endReachedDistance: 0.2
-  alwaysDrawGizmos: 0
+  slowdownDistance: 0.33
+  pickNextWaypointDist: 0.025
+  endReachedDistance: 0.54
+  alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
-  whenCloseToDestination: 1
+  whenCloseToDestination: 0
   constrainInsideGraph: 1
 --- !u!114 &1771333438
 MonoBehaviour:
@@ -9845,8 +9845,8 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 4294967295
-  thickRaycast: 0
-  thickRaycastRadius: 0
+  thickRaycast: 1
+  thickRaycastRadius: 0.05
   use2DPhysics: 1
   raycastOffset: {x: 0, y: 0, z: 0}
   useGraphRaycasting: 0
@@ -9888,7 +9888,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2004343056}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.225, y: 0.549, z: 0}
+  m_LocalPosition: {x: 0.391, y: 0.125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
