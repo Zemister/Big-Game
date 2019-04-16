@@ -6,10 +6,12 @@ public class EnemyProjectile : MonoBehaviour {
 
     //Range of projectile is decided by speed and lifetime
     public float projectileSpeed;
-    public float lifeTime;
+    public float range;
+    private float lifeTime;
+    public int damage = 1;
+
     public float offsetX;
     public float offsetY;
-    public int damage = 1;
 
     public Transform damageNumber;
 
@@ -21,6 +23,7 @@ public class EnemyProjectile : MonoBehaviour {
 
     void Start()
     {
+        lifeTime = range / 5 / projectileSpeed;
         Destroy(gameObject, lifeTime);
     }
 
@@ -43,7 +46,7 @@ public class EnemyProjectile : MonoBehaviour {
             var textPosition = new Vector2(textPositionX, textPositionY);
 
             var clone = (Transform)Instantiate(damageNumber, textPosition, Quaternion.Euler(Vector3.zero));
-            clone.GetComponent<FloatingDamageNumbers>().damageNumber = damage;
+            clone.GetComponent<FloatingDamageNumbers>().damageNumber = damage - player.playerDefence;
             if (!canPiercePlayers)
             {
                 Destroy(gameObject);

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3459691093191570894}
   - component: {fileID: 3459691093191570889}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,12 +97,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3459691093324961510}
+  - component: {fileID: 6191926659949160971}
   - component: {fileID: 3459691093324961511}
   - component: {fileID: 3459691093324961508}
   - component: {fileID: 3459691093324961509}
   - component: {fileID: 3459691093324961514}
   m_Layer: 5
-  m_Name: Canvas 1
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,6 +129,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &6191926659949160971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3459691093324961515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51d8b4c123e19b54e8247a1aa6c89f76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevel: 0
+  currentExp: 0
+  health: 0
+  attack: 0
+  tempo: 0
+  defence: 0
+  agility: 0
 --- !u!223 &3459691093324961511
 Canvas:
   m_ObjectHideFlags: 0
@@ -161,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}

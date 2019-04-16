@@ -24,8 +24,9 @@ public class PlayerController : MonoBehaviour {
     private float xAim, yAim;
 
     //Attack speed variables
+    public float attacksPerSecond;
     private float attackSpeedCounter;
-    public float attackSpeed;
+    private float attackSpeed;
 
     void Start()
     {
@@ -76,10 +77,11 @@ public class PlayerController : MonoBehaviour {
         Vector2 mousePosition = new Vector2 (Camera.main.ScreenToWorldPoint (Input.mousePosition).x, Camera.main.ScreenToWorldPoint (Input.mousePosition).y);
         float xDirection = (mousePosition.x - shotPoint.position.x);
         float yDirection = (mousePosition.y - shotPoint.position.y);
-        
+
         //Move shotPoint in front of character
 
         //Fire with attack speed control
+        attackSpeed = 1 / attacksPerSecond;
         if (attackSpeedCounter <= 0)
         {
             if (Input.GetButton("Fire1"))

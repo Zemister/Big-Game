@@ -94,11 +94,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7cf4e37229b27442ae64da3542d1933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 1.4
-  lifeTime: 1
+  projectileSpeed: 1
+  range: 5.8
+  weaponDamage: 25
   offsetX: 0.06
   offsetY: 0.08
-  damage: 100
   damageNumber: {fileID: 2635622989054232504, guid: 20109861c24d2cf4ba9394b965f338d7,
     type: 3}
   canPierceEnemies: 0

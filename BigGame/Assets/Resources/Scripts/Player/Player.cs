@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
     public int playerHealth = 1;
     public int playerMaxHealth = 1;
 
+    public int playerDefence = 1;
+
     void Start()
     {
         playerHealth = playerMaxHealth;
@@ -14,7 +16,8 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        playerHealth -= damage;
+        //need to make diminishing return so players can't stack defense
+        playerHealth -= (damage - playerDefence);
 
         if (playerHealth <= 0)
         {

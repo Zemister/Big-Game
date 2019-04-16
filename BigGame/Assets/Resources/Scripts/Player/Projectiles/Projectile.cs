@@ -6,12 +6,16 @@ public class Projectile : MonoBehaviour {
 
     //Range of projectile is decided by speed and lifetime
     public float projectileSpeed;
-    public float lifeTime;
+    public float range;
+    private float lifeTime;
+    public int weaponDamage = 1;
+
     public float offsetX;
     public float offsetY;
-    public int damage = 1;
 
     public Transform damageNumber;
+
+    private PlayerStats stats;
 
     public bool canPierceEnemies;
     public bool canPierceWalls;
@@ -20,6 +24,8 @@ public class Projectile : MonoBehaviour {
     public LayerMask whatIsSolid;
 
 	void Start () {
+        stats = FindObjectOfType<PlayerStats>();
+        lifeTime = range / 5 / projectileSpeed;
         Destroy(gameObject, lifeTime);
     }
 
@@ -35,9 +41,11 @@ public class Projectile : MonoBehaviour {
         if (hitInfo.gameObject.tag == "Enemy")
         {
             GameObject enemyPosition = hitInfo.gameObject;
+            //add calculation for weaponDamage (weapon weaponDamage * (attack/something) probably also add to weaponDamage number vv
+            int damage = weaponDamage + stats.attack;
             enemy.TakeDamage(damage);
 
-            //Enemy damage text
+            //Enemy weaponDamage text
             var textPositionX = enemyPosition.transform.position.x + offsetX;
             var textPositionY = enemyPosition.transform.position.y + offsetY;
             var textPosition = new Vector2(textPositionX, textPositionY);
@@ -65,7 +73,7 @@ public class Projectile : MonoBehaviour {
     {
         if (hitInfo.collider.CompareTag("Enemy"))
         {
-            Debug.Log("Enemy Must Take Damage!");
+            Debug.Log("Enemy Must Take weaponDamage!");
         }
         Destroy(gameObject);
     }
