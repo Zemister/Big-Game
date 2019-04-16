@@ -12,8 +12,8 @@ public class Slot : MonoBehaviour
     public bool empty;
     public Sprite icon;
 
-    public Transform slotIconGO;
-    public Transform removeButton;
+    private Transform slotIconGO;
+    private Transform removeButton;
 
     void Start()
     {
