@@ -9,6 +9,7 @@ TagManager:
   - Character
   - Enemy Projectile
   - Environment
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Enemy
   - Environment
   - Player
-  - 
+  - Item
   - 
   - 
   - 
@@ -51,6 +52,9 @@ TagManager:
     locked: 0
   - name: Enemy Projectile
     uniqueID: 150841029
+    locked: 0
+  - name: Item
+    uniqueID: 2510269247
     locked: 0
   - name: Player
     uniqueID: 1242645071

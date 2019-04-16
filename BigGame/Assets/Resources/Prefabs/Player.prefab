@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9221392251351437158}
   - component: {fileID: 9221392251351437156}
   - component: {fileID: 9221392251351437157}
+  - component: {fileID: 2197041436329350761}
   - component: {fileID: 9221392251351437081}
   - component: {fileID: 9221392251351437155}
   - component: {fileID: 9221392251351437080}
@@ -123,7 +124,21 @@ MonoBehaviour:
   projectilePrefab: {fileID: 4158167666953370, guid: 8c969416e6af57b4186bba9a07d7fcf1,
     type: 3}
   shotPoint: {fileID: 9221392251432712861}
-  attackSpeed: 0.15
+  attacksPerSecond: 0
+--- !u!114 &2197041436329350761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9221392251351437154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ac44d80954a17e49aeafc9c31013cdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryEnabled: 0
+  inventory: {fileID: 0}
 --- !u!114 &9221392251351437081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: 1
   playerMaxHealth: 100
+  playerDefence: 1
 --- !u!50 &9221392251351437155
 Rigidbody2D:
   serializedVersion: 4
