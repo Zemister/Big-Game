@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9221392251351437159}
   - component: {fileID: 9221392251351437158}
+  - component: {fileID: 8283476684982255068}
   - component: {fileID: 9221392251351437156}
   - component: {fileID: 9221392251351437157}
   - component: {fileID: 2197041436329350761}
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1242645071
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300008, guid: 9c793ffb519dcdd438fb5ce4d783e692, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -86,6 +87,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8283476684982255068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9221392251351437154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51d8b4c123e19b54e8247a1aa6c89f76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevel: 0
+  currentExp: 0
+  health: 50
+  attack: 1
+  tempo: 1
+  defence: 1
+  agility: 1
 --- !u!95 &9221392251351437156
 Animator:
   serializedVersion: 3
@@ -137,8 +157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac44d80954a17e49aeafc9c31013cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryEnabled: 0
   inventory: {fileID: 0}
+  slotHolder: {fileID: 0}
 --- !u!114 &9221392251351437081
 MonoBehaviour:
   m_ObjectHideFlags: 0

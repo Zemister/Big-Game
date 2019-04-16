@@ -8,12 +8,14 @@ public class EnemyProjectile : MonoBehaviour {
     public float projectileSpeed;
     public float range;
     private float lifeTime;
-    public int damage = 1;
+    public int enemyDamage = 1;
 
     public float offsetX;
     public float offsetY;
 
     public Transform damageNumber;
+
+    private PlayerStats stats;
 
     public bool canPiercePlayers;
     public bool canPierceWalls;
@@ -23,6 +25,7 @@ public class EnemyProjectile : MonoBehaviour {
 
     void Start()
     {
+        stats = FindObjectOfType<PlayerStats>();
         lifeTime = range / 5 / projectileSpeed;
         Destroy(gameObject, lifeTime);
     }
@@ -39,6 +42,7 @@ public class EnemyProjectile : MonoBehaviour {
         if (hitInfo.gameObject.tag == "Player")
         {
             GameObject playerPosition = hitInfo.gameObject;
+            int damage = enemyDamage - stats.defence;
             player.TakeDamage(damage);
 
             var textPositionX = playerPosition.transform.position.x + offsetX;
@@ -46,7 +50,7 @@ public class EnemyProjectile : MonoBehaviour {
             var textPosition = new Vector2(textPositionX, textPositionY);
 
             var clone = (Transform)Instantiate(damageNumber, textPosition, Quaternion.Euler(Vector3.zero));
-            clone.GetComponent<FloatingDamageNumbers>().damageNumber = damage - player.playerDefence;
+            clone.GetComponent<FloatingDamageNumbers>().damageNumber = damage;
             if (!canPiercePlayers)
             {
                 Destroy(gameObject);

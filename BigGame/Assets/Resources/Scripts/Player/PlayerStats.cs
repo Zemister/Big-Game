@@ -27,10 +27,11 @@ public class PlayerStats : MonoBehaviour
 
         //These will be base stats, might do through editor instead, or just add scripts for each class or something
         health = 20;
+        defence = 1;
         attack = 1;
         tempo = 1;
-        defence = 1;
         agility = 1;
+        playerHealthAndDefence.playerHealth = health;
     }
 
     // Update is called once per frame

@@ -122,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 1
   range: 3
-  damage: 4
+  damage: 1
   offsetX: 0
   offsetY: 0.1
   damageNumber: {fileID: 2635622989054232504, guid: 20109861c24d2cf4ba9394b965f338d7,

@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int playerHealth = 1;
-    public int playerMaxHealth = 1;
+    public int playerHealth;
+    public int playerMaxHealth;
 
-    public int playerDefence = 1;
+    public int playerDefence;
 
     void Start()
     {
-        playerHealth = playerMaxHealth;
+        //playerHealth = playerMaxHealth;
     }
 
     public void TakeDamage(int damage)
     {
         //need to make diminishing return so players can't stack defense
-        playerHealth -= (damage - playerDefence);
+        playerHealth -= (damage);
 
         if (playerHealth <= 0)
         {
