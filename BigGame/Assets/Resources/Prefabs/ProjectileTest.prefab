@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4158167666953370}
   - component: {fileID: 212791214925912318}
-  - component: {fileID: 114737945696066706}
+  - component: {fileID: 4331820280276687198}
   - component: {fileID: 8227786076959315654}
   - component: {fileID: 8466313697043066558}
   m_Layer: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &114737945696066706
+--- !u!114 &4331820280276687198
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,21 +91,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1297244689777736}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7cf4e37229b27442ae64da3542d1933, type: 3}
+  m_Script: {fileID: 11500000, guid: 208adb431a422d44082bb5c8c75217f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 1
-  range: 5.8
-  weaponDamage: 25
-  offsetX: 0.06
-  offsetY: 0.08
-  damageNumber: {fileID: 2635622989054232504, guid: 20109861c24d2cf4ba9394b965f338d7,
-    type: 3}
+  range: 5
   canPierceEnemies: 0
   canPierceWalls: 0
-  whatIsSolid:
-    serializedVersion: 2
-    m_Bits: 768
+  weaponDamage: 25
+  offsetX: 0
+  offsetY: 0
+  damageNumber: {fileID: 2635622989054232504, guid: 20109861c24d2cf4ba9394b965f338d7,
+    type: 3}
 --- !u!61 &8227786076959315654
 BoxCollider2D:
   m_ObjectHideFlags: 0

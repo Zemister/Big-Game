@@ -122,11 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 2
   range: 5
-  enemyDamage: 1
-  offsetX: 0
-  offsetY: 0.1
-  damageNumber: {fileID: 2635622989054232504, guid: 20109861c24d2cf4ba9394b965f338d7,
-    type: 3}
+  enemyDamage: 3
   canPiercePlayers: 0
   canPierceWalls: 0
   whatIsSolid:
