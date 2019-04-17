@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228ebd44d6b63ad47ac7ea531e264ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: 
+  levelToLoad: TestArea
 --- !u!1 &12838504
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,135 +380,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41314726}
   m_CullTransparentMesh: 0
---- !u!1 &95172786
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 95172790}
-  - component: {fileID: 95172789}
-  - component: {fileID: 95172788}
-  - component: {fileID: 95172787}
-  m_Layer: 12
-  m_Name: Weapon
-  m_TagString: Weapon
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &95172787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 95172786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edbeee5418b45aa49a910054ea610f44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponName: Sword
-  weaponDamage: 1
-  weaponFireRate: 1
-  weaponRange: 5
-  projectileSpeed: 2
-  equipped: 0
-  projectilePrefab: {fileID: 7152572809976702196, guid: afc824c351f5927479846d41917e741a,
-    type: 3}
-  projectileSprite: {fileID: 21300000, guid: 6627a035a2c74cb49ac490839b58cb9e, type: 3}
-  weaponIcon: {fileID: 21300054, guid: 0484bd52c9085804fa0b82d9f668d5d0, type: 3}
---- !u!61 &95172788
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 95172786}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.29, y: 0.35}
-  m_EdgeRadius: 0
---- !u!212 &95172789
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 95172786}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1784698049
-  m_SortingLayer: 3
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300054, guid: 0484bd52c9085804fa0b82d9f668d5d0, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &95172790
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 95172786}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.877, y: 0.245, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &99655085
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,9 +783,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 0
-  type: 
-  description: 
-  icon: {fileID: 0}
+  type: Weapon
+  description: TestItem
+  icon: {fileID: 21300028, guid: 0484bd52c9085804fa0b82d9f668d5d0, type: 3}
   pickedUp: 0
 --- !u!61 &265677245
 BoxCollider2D:
@@ -2763,7 +2634,7 @@ MonoBehaviour:
   shotPoint: {fileID: 1302910783}
   projectilePrefab: {fileID: 1029333634003040661, guid: 3b107632d2af1cb458b9a7a3f2d191a8,
     type: 3}
-  startTimeBetweenShots: 1
+  startTimeBetweenShots: 0.25
 --- !u!114 &573840231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2776,11 +2647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c208208d0dc15d44be375e3a57e90a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 500
-  offsetX: 0
-  offsetY: 0
-  damageNumber: {fileID: 2635622989054232504, guid: 20109861c24d2cf4ba9394b965f338d7,
-    type: 3}
+  health: 5000
 --- !u!50 &573840232
 Rigidbody2D:
   serializedVersion: 4
@@ -3001,11 +2868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-<<<<<<< HEAD
-    dataString: UEsDBBQAAAgIAACYn+tVb5/hXAIAAAIFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMly4jAQ/RVK5yElEwJkbjMOIXPIUmGmcvFFWG2sQpZcWgIkxb9PSzbYcU40/V53v17kTyKUrSF32qyM4I+aA/k5IsEmP0Yd+AAHttVqLT7gzHkT3JWBxCLnlTmh0Z+EMKsrcEbkv9RWBjJFp1ei0KZa8i2k2jqL7oJJCwgZ7UK0QtfniBzwZ3wbQo5oTebB+kDrlo5OaOagHJiOeiaeaQ3Lq1yyqgYeJHfkWUueRZLCVlqcXtGA5VpKYVspxB3r2GrKauuxESRwwbC1WD90WoLYli7I7Ac/F4UF12oy7HgnDE6oyUp+62ZsFbO7Rtg7kz7UuUkmUVaT9PEbPk4iXBhdPZzrJjTUcKXId6/smDPrenPtu+++Cvdqz+SObSS8laCe9MporziCzvgQ6i1M7rq/l9bSEvJd52+kDpy+/r6dydX1YposZtez5ZjO21WFhk5xFIdUimoT9zBtHGup4/DjIYDBTf1B9fFMbJsXvUHSPwt/2bZ/Ty1wL4x1CLUtq6B1o70JVLKMAwyteZdqoyC62w5qUEy64wumccN9DrBe2QFyz8LLaYu32PlBDEKiu+NTOoBe9P6yOVvq/SPY8tk7KVQ/WUCecFCpVqq5NztAQ9zam4Ll/bitF/zrpZHpgt/OYE6nBZ0myfVkvFkwShljcJPQyc18SuIpCoWdMvnSSG0HhHtT3SgVnt35kzJaGVbH4+eG7Vfio9K9oQtV6HVuANRzk+GiHAwWwXfKl1zgiNbgnFBx4+QzI1LnO+DZJVEWW10enGFZlyUjtXjXLngyksZvSEZO5PQfUEsDBBQAAAgIAACYn+s9VAfKbAAAAHcAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jPXUVBKL0osyCgGChiCOKWZKSB2tJKJRYqlWaq5gUmagYmhobGRbpJFooFBYmJiqqmhgZGpuYlSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAJif61Vvn+FcAgAAAgUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJif6z1UB8psAAAAdwAAAAkAJAAAAAAAAAAAAAAAqQIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABgAwAAAAA=
-=======
     dataString: UEsDBBQAAAgIAACAn+sSu93WXgIAAAMFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMty4jAQ/BVK5yUlEwJkb7sOIXvIo8Ju5eKLsMZYhSy59AiQFP++I9lgxzkhpntG3TMjfxKhbA2502ZlBH/UHMjPEQln8mPUgQ9wYFut1uIDzpw3wV0ZSCxyXpkTGuNJSLO6AmdE/kttZSBTDHolCm2qJd9Cqq2zGC6YtICQ0S5kKwx9jsgBf8a3IeWIp8k8nD7wdEtHJzzmoByYjnomnmkNy6tcsqoGHiR35FlLnl9NIk2hmZZBr2hAcy2lsK0Y4o51NJuy2nq0ggQuGJqLCoLXEsS2dEFoP/m5KCy4VpVhxzthsEdNVfJbN42rmN010t6Z9OGem6SR1RR9/IaPkwgXRlcP53sTGu5wpch3r+yYM+t6ne2H774K92rP5I5tJLyVoJ70ymivOILO+JDqLUzuur8Xa2kJ+a6LN1IHQV9/n8/k6noxTRaz69lyTOftsIKhU2zFIZWi2sQ5TJvAWurY/LgKYHBSf1B9XBTb1sVokPTPwl+27W9UC9wLYx1CrWUVtG60N4FKlrGBwZp3qTYKYrh1UINi0h1fsIwbznOA9a4dIPcsvJ328hY7P4lBSgx3fEoH0IveXyZnS71/BFs+eyeF6hcLyBM2KtVKNftmB2jIW3tTsBw6s1sv+NdFI9MFv53BnE4LOk2S68l4s2CUMsbgJqGTm/mUxE0UCo0y+dIobfuDY1NdcYVbd/6mjFaG1XH3uWH7lfiodK/nQhV6nRsA9dxUuAgHg5fgM+VLLrBDa3BOqDhw8pkRqfMd8OxSKItOlwdnWNZVyUgt3rULkYyk8SOSkRM5/QdQSwMEFAAACAgAAICf6z1UB8psAAAAdwAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSM9dRUEovSizIKAYKGII4pZkpIHa0kolFiqVZqrmBSZqBiaGhsZFukkWigUFiYmKqqaGBkam5iVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAgJ/rErvd1l4CAAADBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAgJ/rPVQHymwAAAB3AAAACQAkAAAAAAAAAAAAAACrAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAGIDAAAAAA==
->>>>>>> 0b2f4c9d504e7c80f381673de27afbc4af83f298
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -12747,10 +12610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c208208d0dc15d44be375e3a57e90a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
-  offsetX: 0
-  offsetY: 0
-  damageNumber: {fileID: 0}
+  health: 500
 --- !u!50 &1487010631
 Rigidbody2D:
   serializedVersion: 4
@@ -12803,7 +12663,7 @@ MonoBehaviour:
   shotPoint: {fileID: 2114282656}
   projectilePrefab: {fileID: 1029333634003040661, guid: 3b107632d2af1cb458b9a7a3f2d191a8,
     type: 3}
-  startTimeBetweenShots: 1
+  startTimeBetweenShots: 0.1
 --- !u!1 &1521085686
 GameObject:
   m_ObjectHideFlags: 0
@@ -13583,9 +13443,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 0
-  type: 
-  description: 
-  icon: {fileID: 0}
+  type: Weapon
+  description: TestItem
+  icon: {fileID: 21300054, guid: 0484bd52c9085804fa0b82d9f668d5d0, type: 3}
   pickedUp: 0
 --- !u!61 &1831212441
 BoxCollider2D:
