@@ -28,8 +28,8 @@ public class EnemyThreeShot : MonoBehaviour {
         if (timeBetweenShots <= 0)
         {
             Instantiate(projectilePrefab, shotPoint.position, shotPoint.rotation);
-            Instantiate(projectilePrefab, shotPoint.position, shotPoint.rotation * Quaternion.Euler(0, 0, 30));
-            Instantiate(projectilePrefab, shotPoint.position, shotPoint.rotation * Quaternion.Euler(0, 0, 330));
+            Instantiate(projectilePrefab, shotPoint.position, shotPoint.rotation * Quaternion.Euler(0, 0, 15));
+            Instantiate(projectilePrefab, shotPoint.position, shotPoint.rotation * Quaternion.Euler(0, 0, -15));
             timeBetweenShots = startTimeBetweenShots;
         }
         else

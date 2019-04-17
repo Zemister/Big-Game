@@ -13227,7 +13227,7 @@ MonoBehaviour:
   shotPoint: {fileID: 2114282656}
   projectilePrefab: {fileID: 1029333634003040661, guid: 3b107632d2af1cb458b9a7a3f2d191a8,
     type: 3}
-  startTimeBetweenShots: 0.8
+  startTimeBetweenShots: 0.4
 --- !u!1 &1521085686
 GameObject:
   m_ObjectHideFlags: 0
