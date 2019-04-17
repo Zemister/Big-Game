@@ -44,7 +44,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    //This will pickup an item upon touching it, will change it to button
+    //This will pickup an item upon touching it
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "Item")

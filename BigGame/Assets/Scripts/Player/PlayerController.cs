@@ -19,7 +19,8 @@ public class PlayerController : MonoBehaviour
     private float attackSpeed;
 
     private float xAim, yAim;
-    public Transform projectilePrefab;
+
+    private Transform weaponSlot;
     public Transform shotPoint;
 
     void Start()
@@ -78,7 +79,6 @@ public class PlayerController : MonoBehaviour
         Vector2 mousePosition = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
         xAim = (mousePosition.x - shotPoint.position.x);
         yAim = (mousePosition.y - shotPoint.position.y);
-
         //Create way to move shotPoint in front of character here so animation looks smoother (may have to do this in the shotPoint rotation function
 
         //Fire Projectile
@@ -87,19 +87,30 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetButton("Fire1"))
             {
-                animator.SetBool("isAttacking", true);
-                animator.SetFloat("xAim", xAim);
-                animator.SetFloat("yAim", yAim);
+                weaponSlot = transform.GetChild(1);
+                if (weaponSlot.GetComponent<WeaponSlot>().projectilePrefab == null)
+                    {
+                        Debug.Log("No Weapon Equipped");
+                    }
+                else
+                {
+                    animator.SetBool("isAttacking", true);
+                    animator.SetFloat("xAim", xAim);
+                    animator.SetFloat("yAim", yAim);
 
-                Instantiate(projectilePrefab, shotPoint.position, shotPoint.rotation);
-                attackSpeedCounter = attackSpeed;
-            } else {
-                animator.SetBool("isAttacking", false);
+                    Instantiate(weaponSlot.GetComponent<WeaponSlot>().projectilePrefab, shotPoint.position, shotPoint.rotation);
+                    attackSpeedCounter = attackSpeed;
+                }
             }
-        } else {
+            else
+            {
+                    animator.SetBool("isAttacking", false);
+            }
+        }
+        else
+        {
             attackSpeedCounter -= Time.deltaTime;
         }
-
     }
 
     private void FetchStats()

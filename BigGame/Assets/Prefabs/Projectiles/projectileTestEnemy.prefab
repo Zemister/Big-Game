@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4580733381439982435}
   - component: {fileID: 6916186793707174997}
   - component: {fileID: 6718339746968963290}
-  - component: {fileID: 6421459857680621311}
   m_Layer: 0
   m_Name: projectileTestEnemy
   m_TagString: Enemy Projectile
@@ -128,24 +127,3 @@ MonoBehaviour:
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 1536
---- !u!50 &6421459857680621311
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2549841339842779919}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0

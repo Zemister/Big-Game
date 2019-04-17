@@ -10,6 +10,7 @@ TagManager:
   - Enemy Projectile
   - Environment
   - Item
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Environment
   - Player
   - Item
-  - 
+  - Weapon
   - 
   - 
   - 
