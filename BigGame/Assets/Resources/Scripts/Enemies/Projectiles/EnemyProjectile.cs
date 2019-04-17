@@ -8,15 +8,7 @@ public class EnemyProjectile : MonoBehaviour {
     public float projectileSpeed;
     public float range;
     private float lifeTime;
-    public int enemyDamage = 1;
-
-    public float offsetX;
-    public float offsetY;
-
-    public Transform damageNumber;
-
-    private PlayerStats stats;
-
+    public int enemyDamage;
     public bool canPiercePlayers;
     public bool canPierceWalls;
 
@@ -25,32 +17,22 @@ public class EnemyProjectile : MonoBehaviour {
 
     void Start()
     {
-        stats = FindObjectOfType<PlayerStats>();
         lifeTime = range / 5 / projectileSpeed;
         Destroy(gameObject, lifeTime);
     }
 
     void Update()
     {
-        //May change how enemy bullet movement works later
-        transform.Translate(Vector3.up * projectileSpeed * Time.deltaTime);
+        MoveProjectile();
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        Player player = hitInfo.GetComponent<Player>();
+        PlayerResourceManager player = hitInfo.GetComponent<PlayerResourceManager>();
         if (hitInfo.gameObject.tag == "Player")
         {
-            GameObject playerPosition = hitInfo.gameObject;
-            int damage = enemyDamage - stats.defence;
-            player.TakeDamage(damage);
+            player.TakeDamage(enemyDamage);
 
-            var textPositionX = playerPosition.transform.position.x + offsetX;
-            var textPositionY = playerPosition.transform.position.y + offsetY;
-            var textPosition = new Vector2(textPositionX, textPositionY);
-
-            var clone = (Transform)Instantiate(damageNumber, textPosition, Quaternion.Euler(Vector3.zero));
-            clone.GetComponent<FloatingDamageNumbers>().damageNumber = damage;
             if (!canPiercePlayers)
             {
                 Destroy(gameObject);
@@ -64,4 +46,18 @@ public class EnemyProjectile : MonoBehaviour {
             }
         }
     }
+
+    private void MoveProjectile()
+    {
+        transform.Translate(Vector3.up * projectileSpeed * Time.deltaTime);
+    }
+    /*
+    private void FetchStats()
+    {
+        //Fetch Player Stats so they stay up to date
+        Player player = FindObjectOfType<Player>();
+
+        playerDefence = player.defence;
+    }
+    */
 }

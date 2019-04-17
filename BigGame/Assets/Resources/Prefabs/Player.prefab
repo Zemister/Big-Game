@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 9221392251351437159}
   - component: {fileID: 9221392251351437158}
-  - component: {fileID: 8283476684982255068}
-  - component: {fileID: 9221392251351437156}
-  - component: {fileID: 9221392251351437157}
+  - component: {fileID: 4794002353168916371}
+  - component: {fileID: 7244006143604726403}
+  - component: {fileID: 3163780921194789384}
   - component: {fileID: 2197041436329350761}
-  - component: {fileID: 9221392251351437081}
+  - component: {fileID: 9221392251351437156}
   - component: {fileID: 9221392251351437155}
   - component: {fileID: 9221392251351437080}
   m_Layer: 10
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8283476684982255068
+--- !u!114 &4794002353168916371
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,16 +96,68 @@ MonoBehaviour:
   m_GameObject: {fileID: 9221392251351437154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51d8b4c123e19b54e8247a1aa6c89f76, type: 3}
+  m_Script: {fileID: 11500000, guid: e7aea9c1fac9f404a9260643d6d22845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 0
   currentExp: 0
-  health: 50
-  attack: 1
-  tempo: 1
-  defence: 1
-  agility: 1
+  addHealth: 0
+  addStrength: 0
+  addDexterity: 0
+  addDefence: 0
+  addAgility: 0
+  health: 0
+  strength: 0
+  dexterity: 0
+  defence: 0
+  agility: 0
+--- !u!114 &7244006143604726403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9221392251351437154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19225f8f9c873114aa1bd4600f164817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 9221392251351437156}
+  projectilePrefab: {fileID: 4158167666953370, guid: 8c969416e6af57b4186bba9a07d7fcf1,
+    type: 3}
+  shotPoint: {fileID: 9221392251432712861}
+--- !u!114 &3163780921194789384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9221392251351437154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab8ebc85a62a9f4cbde411fc50e4ed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  offsetX: 0
+  offsetY: 0
+  damageNumber: {fileID: 2635622989054232504, guid: 20109861c24d2cf4ba9394b965f338d7,
+    type: 3}
+--- !u!114 &2197041436329350761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9221392251351437154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ac44d80954a17e49aeafc9c31013cdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 0}
+  slotHolder: {fileID: 0}
 --- !u!95 &9221392251351437156
 Animator:
   serializedVersion: 3
@@ -125,55 +177,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &9221392251351437157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9221392251351437154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7443953ec971e2468cdb34950141869, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 9221392251351437156}
-  cursorTexture: {fileID: 2800000, guid: 231f57c9e20d3d54d98b0e17cac72abf, type: 3}
-  hotSpot: {x: 8, y: 8}
-  playerSpeed: 1
-  projectilePrefab: {fileID: 4158167666953370, guid: 8c969416e6af57b4186bba9a07d7fcf1,
-    type: 3}
-  shotPoint: {fileID: 9221392251432712861}
-  attacksPerSecond: 0
---- !u!114 &2197041436329350761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9221392251351437154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ac44d80954a17e49aeafc9c31013cdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
-  slotHolder: {fileID: 0}
---- !u!114 &9221392251351437081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9221392251351437154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dc7cc2a0cc167e49b263205c7fee2d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: 1
-  playerMaxHealth: 100
-  playerDefence: 1
 --- !u!50 &9221392251351437155
 Rigidbody2D:
   serializedVersion: 4

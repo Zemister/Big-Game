@@ -6,7 +6,7 @@ public class UIManager : MonoBehaviour
 {
     public Slider healthBar;
     public Text HPText;
-    public Player playerHealth;
+    public PlayerResourceManager player;
 
     private static bool UIExists;
 
@@ -25,8 +25,8 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        healthBar.maxValue = playerHealth.playerMaxHealth;
-        healthBar.value = playerHealth.playerHealth;
-        HPText.text = "HP: " + playerHealth.playerHealth + "/" + playerHealth.playerMaxHealth;
+        healthBar.maxValue = player.maxHealth;
+        healthBar.value = player.currentHealth;
+        HPText.text = "HP: " + player.currentHealth + "/" + player.maxHealth;
     }
 }
