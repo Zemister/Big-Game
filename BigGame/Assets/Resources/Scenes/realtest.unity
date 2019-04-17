@@ -764,7 +764,7 @@ GameObject:
   - component: {fileID: 265677245}
   - component: {fileID: 265677244}
   m_Layer: 11
-  m_Name: directionsTest
+  m_Name: itemTest
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4266,7 +4266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACYn+uMfzWQXQIAAAEFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMty4jAQ/BVK5yUlEwJkb7sOIXvIo8Ju5eKLsMZYhSy59AiQFP++I9lgxzkhplsz3TMjfxKhbA2502ZlBH/UHMjPEQln8mPUgQ9wYFut1uIDzpw3wV0ZSCxyXpkTGuNJuGZ1Bc6I/JfaykCmGPRKFNpUS76FVFtnMVwwaQEho124rTD0OSIH/BnfhitHPE3m4fSBp1s6OuExB+XAdNQz8UxrWF7lklU18CC5I89a8iySFFppcXpFA5ZrKYVtpRB3rKPVlNXWoxEkcMHQWqwfnJYgtqULMvuXn4vCgms1GXa8EwY71GQlv3XTtorZXSPsnUkf6twkkyirSfr4DR8nES6Mrh7OdRMaarhS5LtXdsyZdb2+9sN3X4V7tWdyxzYS3kpQT3pltFccQWd8uOotTO66vxdraQn5ros3UgdBX3+fzuTqejFNFrPr2XJM5+2ogqFTbMUhlaLaxDlMm8Ba6tj8uAhgcFJ/UH1cE9vmxWiQ9M/CX7bt71ML3AtjHUKtZRW0brQ3gUqWsYHBmnepNgpiuHVQg2LSHV8wjRvOc4D1yg6QexZeTlu8xc4PYnAlhjs+pQPoRe8vk7Ol3j+CLZ+9k0L1kwXkCRuVaqWafbMDNNxbe1OwHDqzWy/410Uj0wW/ncGcTgs6TZLryXizYJQyxuAmoZOb+ZTETRQKjTL50iht+4NjU11yhVt3/qKMVobVcfe5YfuV+Kh0r+dCFXqdGwD13GS4CAeDRfCZ8iUX2KE1OCdUHDj5zIjU+Q54dkmURafLgzMs67JkpBbv2oVIRtL4CcnIiZz+A1BLAwQUAAAICAAAmJ/rPVQHymwAAAB3AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9Iz11FQSi9KLMgoBgoYgjilmSkgdrSSiUWKpVmquYFJmoGJoaGxkW6SRaKBQWJiYqqpoYGRqbmJUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACYn+uMfzWQXQIAAAEFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACYn+s9VAfKbAAAAHcAAAAJACQAAAAAAAAAAAAAAKoCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAYQMAAAAA
+    dataString: UEsDBBQAAAgIAACAn+uMfzWQXQIAAAEFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMty4jAQ/BVK5yUlEwJkb7sOIXvIo8Ju5eKLsMZYhSy59AiQFP++I9lgxzkhplsz3TMjfxKhbA2502ZlBH/UHMjPEQln8mPUgQ9wYFut1uIDzpw3wV0ZSCxyXpkTGuNJuGZ1Bc6I/JfaykCmGPRKFNpUS76FVFtnMVwwaQEho124rTD0OSIH/BnfhitHPE3m4fSBp1s6OuExB+XAdNQz8UxrWF7lklU18CC5I89a8iySFFppcXpFA5ZrKYVtpRB3rKPVlNXWoxEkcMHQWqwfnJYgtqULMvuXn4vCgms1GXa8EwY71GQlv3XTtorZXSPsnUkf6twkkyirSfr4DR8nES6Mrh7OdRMaarhS5LtXdsyZdb2+9sN3X4V7tWdyxzYS3kpQT3pltFccQWd8uOotTO66vxdraQn5ros3UgdBX3+fzuTqejFNFrPr2XJM5+2ogqFTbMUhlaLaxDlMm8Ba6tj8uAhgcFJ/UH1cE9vmxWiQ9M/CX7bt71ML3AtjHUKtZRW0brQ3gUqWsYHBmnepNgpiuHVQg2LSHV8wjRvOc4D1yg6QexZeTlu8xc4PYnAlhjs+pQPoRe8vk7Ol3j+CLZ+9k0L1kwXkCRuVaqWafbMDNNxbe1OwHDqzWy/410Uj0wW/ncGcTgs6TZLryXizYJQyxuAmoZOb+ZTETRQKjTL50iht+4NjU11yhVt3/qKMVobVcfe5YfuV+Kh0r+dCFXqdGwD13GS4CAeDRfCZ8iUX2KE1OCdUHDj5zIjU+Q54dkmURafLgzMs67JkpBbv2oVIRtL4CcnIiZz+A1BLAwQUAAAICAAAgJ/rPVQHymwAAAB3AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9Iz11FQSi9KLMgoBgoYgjilmSkgdrSSiUWKpVmquYFJmoGJoaGxkW6SRaKBQWJiYqqpoYGRqbmJUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACAn+uMfzWQXQIAAAEFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACAn+s9VAfKbAAAAHcAAAAJACQAAAAAAAAAAAAAAKoCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAYQMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -13211,7 +13211,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.30589548
+  m_Radius: 0.3942502
 --- !u!114 &1487010633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13705,9 +13705,9 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.27
+  slowdownDistance: 1.1
   pickNextWaypointDist: 0.1
-  endReachedDistance: 0.49
+  endReachedDistance: 0.85
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -13988,7 +13988,7 @@ GameObject:
   - component: {fileID: 1831212441}
   - component: {fileID: 1831212440}
   m_Layer: 11
-  m_Name: directionsTest (1)
+  m_Name: itemTest
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
