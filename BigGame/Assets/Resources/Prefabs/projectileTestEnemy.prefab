@@ -120,9 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f8dd2b6aa0d8b4fad507e4c991f2dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 1
-  range: 3
-  damage: 1
+  projectileSpeed: 2
+  range: 5
+  enemyDamage: 1
   offsetX: 0
   offsetY: 0.1
   damageNumber: {fileID: 2635622989054232504, guid: 20109861c24d2cf4ba9394b965f338d7,
