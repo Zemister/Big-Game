@@ -2598,6 +2598,135 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564157877}
   m_CullTransparentMesh: 0
+--- !u!1 &569416724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 569416728}
+  - component: {fileID: 569416727}
+  - component: {fileID: 569416726}
+  - component: {fileID: 569416725}
+  m_Layer: 12
+  m_Name: Weapon
+  m_TagString: Weapon
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &569416725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569416724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edbeee5418b45aa49a910054ea610f44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: Sword
+  weaponDamage: 100
+  weaponFireRate: 6.4
+  weaponRange: 5
+  projectileSpeed: 2
+  equipped: 0
+  projectilePrefab: {fileID: 7152572809976702196, guid: afc824c351f5927479846d41917e741a,
+    type: 3}
+  projectileSprite: {fileID: 21300000, guid: 6627a035a2c74cb49ac490839b58cb9e, type: 3}
+  weaponIcon: {fileID: 21300054, guid: 0484bd52c9085804fa0b82d9f668d5d0, type: 3}
+--- !u!61 &569416726
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569416724}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.29, y: 0.35}
+  m_EdgeRadius: 0
+--- !u!212 &569416727
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569416724}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1784698049
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300054, guid: 0484bd52c9085804fa0b82d9f668d5d0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.32, y: 0.32}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &569416728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569416724}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.877, y: 0.245, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &573840229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2648,6 +2777,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5000
+  offsetX: 0
+  offsetY: 0
+  damageNumber: {fileID: 2635622989054232504, guid: 20109861c24d2cf4ba9394b965f338d7,
+    type: 3}
 --- !u!50 &573840232
 Rigidbody2D:
   serializedVersion: 4
@@ -3035,7 +3168,7 @@ PrefabInstance:
     - target: {fileID: 3163780921194789384, guid: 8f5062940867e4e478ffd0c6b5efd9b3,
         type: 3}
       propertyPath: currentHealth
-      value: 21
+      value: 306
       objectReference: {fileID: 0}
     - target: {fileID: 3163780921194789384, guid: 8f5062940867e4e478ffd0c6b5efd9b3,
         type: 3}
@@ -12611,6 +12744,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 500
+  offsetX: 0
+  offsetY: 0
+  damageNumber: {fileID: 0}
 --- !u!50 &1487010631
 Rigidbody2D:
   serializedVersion: 4
@@ -14092,6 +14228,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 500
+  offsetX: 0
+  offsetY: 0
+  damageNumber: {fileID: 2635622989054232504, guid: 20109861c24d2cf4ba9394b965f338d7,
+    type: 3}
 --- !u!212 &2131238674
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14705,6 +14845,12 @@ PrefabInstance:
       propertyPath: health
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 7521921701089456456, guid: 9a26bc7fc9c838446b9eac7416a1b877,
+        type: 3}
+      propertyPath: damageNumber
+      value: 
+      objectReference: {fileID: 2635622989054232504, guid: 20109861c24d2cf4ba9394b965f338d7,
+        type: 3}
     - target: {fileID: 3698675377834593322, guid: 9a26bc7fc9c838446b9eac7416a1b877,
         type: 3}
       propertyPath: splitterSpawns
@@ -14714,7 +14860,7 @@ PrefabInstance:
     - target: {fileID: 3698675377834593322, guid: 9a26bc7fc9c838446b9eac7416a1b877,
         type: 3}
       propertyPath: minSize
-      value: 0.5
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a26bc7fc9c838446b9eac7416a1b877, type: 3}

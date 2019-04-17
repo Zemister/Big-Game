@@ -55,7 +55,7 @@ public class TestProjectile : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        if (hitInfo.tag == "Environment")
+        if (hitInfo.gameObject.tag == "Environment")
         {
             if (!canPierceWalls)
             {

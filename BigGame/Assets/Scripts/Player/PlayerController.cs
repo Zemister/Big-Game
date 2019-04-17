@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private float playerDex; //for now will just be = what is in Player will create a calculation though later
     private float attackSpeedCounter;
     private float attackSpeed;
+    private float fireRate;
 
     private float xAim, yAim;
 
@@ -80,14 +81,15 @@ public class PlayerController : MonoBehaviour
         xAim = (mousePosition.x - shotPoint.position.x);
         yAim = (mousePosition.y - shotPoint.position.y);
         //Create way to move shotPoint in front of character here so animation looks smoother (may have to do this in the shotPoint rotation function
+        weaponSlot = transform.GetChild(1);
+        fireRate = weaponSlot.GetComponent<WeaponSlot>().weaponFireRate;
 
         //Fire Projectile
-        attackSpeed = 1 / playerDex;
+        attackSpeed = (1 / playerDex) / fireRate;
         if (attackSpeedCounter <= 0)
         {
             if (Input.GetButton("Fire1"))
             {
-                weaponSlot = transform.GetChild(1);
                 if (weaponSlot.GetComponent<WeaponSlot>().projectilePrefab == null)
                     {
                         Debug.Log("No Weapon Equipped");

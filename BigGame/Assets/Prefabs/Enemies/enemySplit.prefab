@@ -143,6 +143,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 25
+  offsetX: 0
+  offsetY: 0
+  damageNumber: {fileID: 2635622989054232504, guid: 20109861c24d2cf4ba9394b965f338d7,
+    type: 3}
 --- !u!58 &7521921701089456455
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -223,6 +227,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 736761100c248804e8b65628aed2dcdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expToGive: 0
   splitterSpawns: {fileID: 7521921701089456451}
   minSize: 0.1
