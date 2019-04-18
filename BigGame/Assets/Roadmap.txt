@@ -1,0 +1,18 @@
+Top Priority
+
+Start Equipment panel  
+Finish Inventory panel
+Finish Equipment panel
+Add tool tips to equipment/inventory panels
+Finish Stat Point panel
+Add shitty Skill Tree panel with few buttons
+
+
+Other random shit that needs to be done
+
+Procedural Generation (For maps possibly and dungeons)		https://www.youtube.com/watch?v=wnoLaui3uO4		https://www.youtube.com/watch?v=D4EOgZyNk-k
+Saving and loading system with JSON files					https://www.youtube.com/watch?v=6uMFEM-napE
+Storing Item/enemy/player data with JSON files
+Add a start menu/settings menu								https://www.youtube.com/watch?v=zc8ac_qUXQY
+Add a system for spell casting/ability use					https://www.youtube.com/watch?v=M7qxcCyZlJ4
+Adding music/sfx											Music something like this: https://freesound.org/people/Greek555/sounds/466319/ (mainly first third of song)
