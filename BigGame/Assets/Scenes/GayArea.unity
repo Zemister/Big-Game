@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228ebd44d6b63ad47ac7ea531e264ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: realtest1
+  levelToLoad: TestAreaZeem
 --- !u!61 &37347226
 BoxCollider2D:
   m_ObjectHideFlags: 0

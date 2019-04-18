@@ -9,7 +9,7 @@ public class StatsPanel : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Y))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             statsPanelEnabled = !statsPanelEnabled;
         }

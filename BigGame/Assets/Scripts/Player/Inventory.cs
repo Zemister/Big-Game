@@ -7,7 +7,7 @@ public class Inventory : MonoBehaviour
     private bool inventoryEnabled;
     public GameObject inventory;
 
-    private int allSlots;
+    public int allSlots;
     private int enabledSlots;
     private GameObject[] slot;
 
@@ -15,7 +15,6 @@ public class Inventory : MonoBehaviour
 
     void Start()
     {
-        allSlots = 6;
         slot = new GameObject[allSlots];
 
         for (int i = 0; i < allSlots; i++)
