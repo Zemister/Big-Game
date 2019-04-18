@@ -22,14 +22,14 @@ public class Player : MonoBehaviour
     //json stuff
     private string path;
     private string jsonString;
+    PlayerData playerCharacter;
 
     void Start()
     {
-        baseHealth = 20;
-        baseStrength = 1;
-        baseDexterity = 1;
-        baseDefence = 1;
-        baseAgility = 1;
+        path = Application.streamingAssetsPath + "/playerData.json";
+        jsonString = File.ReadAllText(path);
+        playerCharacter = JsonUtility.FromJson<PlayerData>(jsonString);
+
         LoadPlayerData();
         CurrentStats();
     }
@@ -37,21 +37,37 @@ public class Player : MonoBehaviour
     void Update()
     {
         CurrentStats();
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            SavePlayerData();
+        }
     }
 
     void LoadPlayerData()
     {
-        path = Application.streamingAssetsPath + "/playerData.json";
-        jsonString = File.ReadAllText(path);
-        PlayerData player = JsonUtility.FromJson<PlayerData>(jsonString);
-        string newPlayer = JsonUtility.ToJson(player);
-        Debug.Log(newPlayer);
+        currentLevel = playerCharacter.Level;
+        currentExp = playerCharacter.CurrentExp;
+        baseHealth = playerCharacter.Health;
+        baseStrength = playerCharacter.Strength;
+        baseDexterity = playerCharacter.Dexterity;
+        baseDefence = playerCharacter.Defence;
+        baseAgility = playerCharacter.Agility;
+    }
 
-        baseHealth = 20;
-        baseStrength = 1;
-        baseDexterity = 1;
-        baseDefence = 1;
-        baseAgility = 1;
+    void SavePlayerData()
+    {
+        playerCharacter.Level = currentLevel;
+        playerCharacter.CurrentExp = currentExp;
+        playerCharacter.Health = health;
+        playerCharacter.Strength = strength;
+        playerCharacter.Dexterity = dexterity;
+        playerCharacter.Defence = defence;
+        playerCharacter.Agility = agility;
+
+        string toJson = JsonUtility.ToJson(playerCharacter);
+
+        File.WriteAllText(path, toJson);
+
     }
 
     public void CurrentStats()
@@ -67,16 +83,6 @@ public class Player : MonoBehaviour
     {
 
     }
-
-    public void SaveBaseStats()
-    {
-
-    }
-
-    public void LoadBaseStats()
-    {
-
-    }
 }
 
  [System.Serializable]
@@ -84,6 +90,10 @@ public class PlayerData
 {
     public string Name;
     public int Level;
-    public int Strength;
+    public int CurrentExp;
     public int Health;
+    public int Strength;
+    public int Dexterity;
+    public int Defence;
+    public int Agility;
 }
