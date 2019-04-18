@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
 
     private int expToLevel;
 
+    public string playerName;
+
     //Base values
     private int baseHealth, baseStrength, baseDexterity, baseDefence, baseAgility;
 
@@ -45,6 +47,7 @@ public class Player : MonoBehaviour
 
     void LoadPlayerData()
     {
+        playerName = playerCharacter.Name;
         currentLevel = playerCharacter.Level;
         currentExp = playerCharacter.CurrentExp;
         baseHealth = playerCharacter.Health;
