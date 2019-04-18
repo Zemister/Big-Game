@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.025009155, y: 89.7}
-  m_SizeDelta: {x: -161.44, y: -124.17999}
+  m_AnchoredPosition: {x: -0.000022888184, y: 92}
+  m_SizeDelta: {x: -151.6, y: -124.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &243933530
 CanvasRenderer:
@@ -1162,8 +1162,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -135, y: 86.899994}
-  m_SizeDelta: {x: 250.52, y: 149.28}
+  m_AnchoredPosition: {x: -123, y: 86.899994}
+  m_SizeDelta: {x: 226.6, y: 149.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2094209273
 CanvasRenderer:
@@ -1818,6 +1818,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180769606487276014, guid: 1d0b80e90aaed544fabc8e50c0078de4,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180769606487276014, guid: 1d0b80e90aaed544fabc8e50c0078de4,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180769606487276014, guid: 1d0b80e90aaed544fabc8e50c0078de4,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d0b80e90aaed544fabc8e50c0078de4, type: 3}

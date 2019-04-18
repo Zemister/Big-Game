@@ -1,0 +1,12 @@
+{
+	{
+		"id": 0,
+		"title": "Weapon1",
+		"value": 10
+	},
+	{
+		"id": 1,
+		"title": "Weapon2",
+		"value": 15
+	}
+}
