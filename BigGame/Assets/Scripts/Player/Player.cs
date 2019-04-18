@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class Player : MonoBehaviour
 {
@@ -18,20 +19,39 @@ public class Player : MonoBehaviour
     //CurentValues
     public int health, strength, dexterity, defence, agility;
 
+    //json stuff
+    private string path;
+    private string jsonString;
+
     void Start()
     {
-        //Call on the json or whichever file handles base values to assign these or xp or some shit who cares
         baseHealth = 20;
         baseStrength = 1;
         baseDexterity = 1;
         baseDefence = 1;
         baseAgility = 1;
+        LoadPlayerData();
         CurrentStats();
     }
 
     void Update()
     {
         CurrentStats();
+    }
+
+    void LoadPlayerData()
+    {
+        path = Application.streamingAssetsPath + "/playerData.json";
+        jsonString = File.ReadAllText(path);
+        PlayerData player = JsonUtility.FromJson<PlayerData>(jsonString);
+        string newPlayer = JsonUtility.ToJson(player);
+        Debug.Log(newPlayer);
+
+        baseHealth = 20;
+        baseStrength = 1;
+        baseDexterity = 1;
+        baseDefence = 1;
+        baseAgility = 1;
     }
 
     public void CurrentStats()
@@ -57,4 +77,13 @@ public class Player : MonoBehaviour
     {
 
     }
+}
+
+ [System.Serializable]
+public class PlayerData
+{
+    public string Name;
+    public int Level;
+    public int Strength;
+    public int Health;
 }
