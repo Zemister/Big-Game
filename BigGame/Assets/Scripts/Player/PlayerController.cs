@@ -62,8 +62,14 @@ public class PlayerController : MonoBehaviour
         //Set Velocity if moving is true and remove if moving is false
         if (isMoving)
         {
-            body.velocity = new Vector2(xInput * playerSpeed, yInput * playerSpeed);
-
+            if (xInput != 0 && yInput != 0)
+            {
+                body.velocity = new Vector2((xInput * playerSpeed)*.7714f, (yInput * playerSpeed)*.7714f);
+            }
+            else
+            {
+                body.velocity = new Vector2(xInput * playerSpeed, yInput * playerSpeed);
+            }
             //Set animator values of x/yInput for animator
             animator.SetFloat("xInput", xInput);
             animator.SetFloat("yInput", yInput);

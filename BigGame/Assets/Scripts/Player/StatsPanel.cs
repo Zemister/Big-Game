@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class StatsPanel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private bool statsPanelEnabled;
+    public GameObject statsPanel;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            statsPanelEnabled = !statsPanelEnabled;
+        }
+        if (statsPanelEnabled == true)
+        {
+            statsPanel.SetActive(true);
+        }
+        else
+        {
+            statsPanel.SetActive(false);
+        }
     }
 }

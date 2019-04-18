@@ -50,6 +50,7 @@ MonoBehaviour:
   weaponRange: 0
   projectileSpeed: 0
   empty: 0
+  projectilePrefab: {fileID: 0}
   projectileSprite: {fileID: 0}
   weaponIcon: {fileID: 0}
 --- !u!1 &9221392251351437154
@@ -67,6 +68,7 @@ GameObject:
   - component: {fileID: 3163780921194789384}
   - component: {fileID: 2197041436329350761}
   - component: {fileID: 7012467347769500870}
+  - component: {fileID: 4318411664691265892}
   - component: {fileID: 9221392251351437156}
   - component: {fileID: 9221392251351437155}
   - component: {fileID: 9221392251351437080}
@@ -178,8 +180,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 9221392251351437156}
-  projectilePrefab: {fileID: 4158167666953370, guid: 8c969416e6af57b4186bba9a07d7fcf1,
-    type: 3}
   shotPoint: {fileID: 9221392251432712861}
 --- !u!114 &3163780921194789384
 MonoBehaviour:
@@ -226,6 +226,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 9221392251351437154}
+--- !u!114 &4318411664691265892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9221392251351437154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 413eead4dd76f834e9d642739301d444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statsPanel: {fileID: 0}
 --- !u!95 &9221392251351437156
 Animator:
   serializedVersion: 3
