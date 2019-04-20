@@ -1,0 +1,16 @@
+{
+	{
+		"id": 0,
+		"title": "Steel Sword",
+		"value": 6,
+		"stats": {
+		"power": 1,
+		"defence": 4,
+		"vitality": 2
+		},
+		"description": "Steel Sword made from pixels",
+		"stackable": false,
+		"rarity": 1,
+		"slug": "steel_sword"
+	}
+}
