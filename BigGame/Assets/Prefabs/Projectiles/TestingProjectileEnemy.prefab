@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7152572809976702197}
   - component: {fileID: 3082067064544878766}
   - component: {fileID: 6084156564821774301}
-  - component: {fileID: 6879470361139329478}
-  m_Layer: 0
-  m_Name: NewTestProjectile
+  - component: {fileID: 2938311810554069826}
+  m_Layer: 12
+  m_Name: TestingProjectileEnemy
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: -309778245
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6627a035a2c74cb49ac490839b58cb9e, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &3082067064544878766
@@ -129,7 +129,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6879470361139329478
+--- !u!114 &2938311810554069826
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,6 +138,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7152572809976702203}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d412e5784d42d13479e7f2cf0ef4b8f3, type: 3}
+  m_Script: {fileID: 11500000, guid: d1e36604d4779e64ca4aeafb83b6ee38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damage: 0
+  Range: 0
+  ProjectileSpeed: 0
+  ProjectileSprite: {fileID: 0}
+  PierceObject: 0
+  PierceEnvironment: 0

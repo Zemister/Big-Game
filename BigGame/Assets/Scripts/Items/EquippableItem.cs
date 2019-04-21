@@ -51,10 +51,11 @@ public class EquippableItem : Item
     public float AgilityPercentBonus;
     [Space]
     public int WeaponDamage;
-    public int WeaponDamagePercentBonus;
+    public float WeaponDamagePercentBonus;
     public float WeaponFireRate;
     public float WeaponRange;
     public float ProjectileSpeed;
+    public Sprite ProjectileSprite;
     [Space]
     public EquipmentType EquipmentType;
     public ClassItem ClassItem;
@@ -77,6 +78,12 @@ public class EquippableItem : Item
             c.WeaponDamage.AddModifier(new StatModifier(WeaponDamagePercentBonus, StatModType.PercentMult, this));
         if (WeaponFireRate != 0)
             c.WeaponFireRate.AddModifier(new StatModifier(WeaponFireRate, StatModType.Flat, this));
+        if (WeaponRange != 0)
+            c.WeaponRange.AddModifier(new StatModifier(WeaponRange, StatModType.Flat, this));
+        if (ProjectileSpeed != 0)
+            c.ProjectileSpeed.AddModifier(new StatModifier(ProjectileSpeed, StatModType.Flat, this));
+        if (ProjectileSprite != null)
+            c.ProjectileSprite = ProjectileSprite;
 
         if (HealthBonus != 0)
             c.Health.AddModifier(new StatModifier(HealthBonus, StatModType.Flat, this));
@@ -117,6 +124,9 @@ public class EquippableItem : Item
     {
         c.WeaponDamage.RemoveAllModifiersFromSource(this);
         c.WeaponFireRate.RemoveAllModifiersFromSource(this);
+        c.WeaponRange.RemoveAllModifiersFromSource(this);
+        c.ProjectileSpeed.RemoveAllModifiersFromSource(this);
+        c.ProjectileSprite = null;
 
         c.Health.RemoveAllModifiersFromSource(this);
         c.Mana.RemoveAllModifiersFromSource(this);

@@ -21,6 +21,7 @@ public class ItemToolTip : MonoBehaviour
             AddStat(item.WeaponDamage, "Weapon Damage");
             AddStat(item.WeaponDamagePercentBonus, "Weapon Damage", isPercent: true);
             AddStat(item.WeaponFireRate, "Fire Rate", isPercent: true);
+            AddStat(item.WeaponRange, "Range");
             sb.AppendLine();
         }
 

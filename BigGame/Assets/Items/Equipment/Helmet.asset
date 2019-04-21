@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9752623190c452c418f8ad90f4dd32e8, type: 3}
   m_Name: Helmet
   m_EditorClassIdentifier: 
+  id: dc1a7de38f62cb344a6b6e9bd85d0eec
   itemName: Helmet
   icon: {fileID: 21300210, guid: 59eebc3a12785054c90291be1210f470, type: 3}
+  MaximumStacks: 1
   HealthBonus: 100
   ManaBonus: 100
   DefenceBonus: 10
   StrengthBonus: 10
-  DexterityBonus: 10
+  DexterityBonus: 100
   WisdomBonus: 10
   VitalityBonus: 10
   AgilityBonus: 10
@@ -35,5 +37,6 @@ MonoBehaviour:
   WeaponFireRate: 0
   WeaponRange: 0
   ProjectileSpeed: 0
+  ProjectileSprite: {fileID: 0}
   EquipmentType: 0
   ClassItem: 0

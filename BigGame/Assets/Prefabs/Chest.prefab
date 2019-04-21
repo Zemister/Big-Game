@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: b3ef51aff96e3ae44b1beeb491db49a0, type: 2}
+  amount: 1
   inventory: {fileID: 0}
   spriteRenderer: {fileID: 4941489439874894308}
   itemPickupKeycode: 116

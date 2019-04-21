@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9752623190c452c418f8ad90f4dd32e8, type: 3}
   m_Name: Staff
   m_EditorClassIdentifier: 
+  id: b3ef51aff96e3ae44b1beeb491db49a0
   itemName: Staff
   icon: {fileID: 21300090, guid: 0484bd52c9085804fa0b82d9f668d5d0, type: 3}
+  MaximumStacks: 1
   HealthBonus: 0
   ManaBonus: 0
   DefenceBonus: 0
@@ -33,7 +35,8 @@ MonoBehaviour:
   WeaponDamage: 50
   WeaponDamagePercentBonus: 3
   WeaponFireRate: 2
-  WeaponRange: 0
-  ProjectileSpeed: 0
+  WeaponRange: 3
+  ProjectileSpeed: 5
+  ProjectileSprite: {fileID: 21300058, guid: 59eebc3a12785054c90291be1210f470, type: 3}
   EquipmentType: 2
-  ClassItem: 0
+  ClassItem: 6

@@ -9,6 +9,7 @@ public class ItemChest : MonoBehaviour
     [SerializeField] KeyCode itemPickupKeycode = KeyCode.T;
 
     private bool isInRange;
+    private bool isEmpty;
 
     private void OnValidate()
     {
@@ -19,11 +20,12 @@ public class ItemChest : MonoBehaviour
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
         spriteRenderer.sprite = item.icon;
+        spriteRenderer.enabled = false;
     }
 
     private void Update()
     {
-        if (isInRange && Input.GetKeyDown(itemPickupKeycode))
+        if (isInRange && !isEmpty && Input.GetKeyDown(itemPickupKeycode))
         {
             Item itemCopy = item.GetCopy();
             if (inventory.AddItem(itemCopy))
@@ -31,7 +33,7 @@ public class ItemChest : MonoBehaviour
                 amount--;
                 if (amount == 0)
                 {
-                    item = null;
+                    isEmpty = true;
                     spriteRenderer.enabled = false;
                 }
             } else
@@ -53,7 +55,7 @@ public class ItemChest : MonoBehaviour
 
     private void CheckCollision(GameObject gameObject, bool state)
     {
-        if (gameObject.gameObject.CompareTag("Player"))
+        if (gameObject.gameObject.CompareTag("Player") && amount > 0)
         {
             isInRange = state;
             spriteRenderer.enabled = state;

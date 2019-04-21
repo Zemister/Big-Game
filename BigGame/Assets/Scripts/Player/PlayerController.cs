@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using CharacterStats;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,6 +15,7 @@ public class PlayerController : MonoBehaviour
 
     private float weaponDamage;
     private float fireRate;
+
     private float playerStrength;
     private float playerDexterity;
     private float playerSpeed;
@@ -117,11 +117,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    //Maybe when fetching stats fetch the equipment slot for weapons instead of the player...
+    
     public void FetchStats(Character stat)
     {
         playerSpeed = 1 + (stat.Agility.Value/50);
         playerStrength = 1 + (stat.Strength.Value / 25);
         playerDexterity = 1 + (stat.Dexterity.Value / 25);
+
         weaponDamage = stat.WeaponDamage.Value;
         fireRate = stat.WeaponFireRate.Value;
     }

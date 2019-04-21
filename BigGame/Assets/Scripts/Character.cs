@@ -16,8 +16,13 @@ public enum ClassCharacter
 public class Character : MonoBehaviour
 {
     public ClassCharacter ClassCharacter;
+    public Sprite ProjectileSprite;
+
     public CharacterStat WeaponDamage;
     public CharacterStat WeaponFireRate;
+    //these two shouldnt be here maybe, look at equipment slot maybe
+    public CharacterStat WeaponRange;
+    public CharacterStat ProjectileSpeed;
 
     public CharacterStat Health;
     public CharacterStat Mana;
