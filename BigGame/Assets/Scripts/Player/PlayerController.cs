@@ -2,8 +2,8 @@
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] Animator animator;
-    [SerializeField] Transform shotPoint;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Transform shotPoint;
     private float xAim, yAim;
     public Transform projectilePrefab;
 
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     private float attackSpeedCounter;
     private float attackSpeed;
 
-    void Start()
+    private void Start()
     {
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Update()
     {
         FetchStats(this.gameObject.GetComponent<Character>());
         Movement();
@@ -60,18 +60,36 @@ public class PlayerController : MonoBehaviour
         //Set Velocity if moving is true and remove if moving is false
         if (isMoving)
         {
-            if (xInput != 0 && yInput != 0)
+            //Allow players to move slowly for BIG PRECISION
+            if (Input.GetKey(KeyCode.LeftShift))
             {
-                body.velocity = new Vector2((xInput * playerSpeed)*.7714f, (yInput * playerSpeed)*.7714f);
+                if (xInput != 0 && yInput != 0)
+                {
+                    body.velocity = new Vector2((xInput * 1) * .7714f, (yInput * 1) * .7714f);
+                }
+                else
+                {
+                    body.velocity = new Vector2(xInput * 1, yInput * 1);
+                }
             }
+            //Normal movement
             else
             {
-                body.velocity = new Vector2(xInput * playerSpeed, yInput * playerSpeed);
+                if (xInput != 0 && yInput != 0)
+                {
+                    body.velocity = new Vector2((xInput * playerSpeed) * .7714f, (yInput * playerSpeed) * .7714f);
+                }
+                else
+                {
+                    body.velocity = new Vector2(xInput * playerSpeed, yInput * playerSpeed);
+                }
             }
             //Set animator values of x/yInput for animator
             animator.SetFloat("xInput", xInput);
             animator.SetFloat("yInput", yInput);
-        } else {
+        }
+        else
+        {
             body.velocity = Vector2.zero;
         }
     }
@@ -118,10 +136,10 @@ public class PlayerController : MonoBehaviour
     }
 
     //Maybe when fetching stats fetch the equipment slot for weapons instead of the player...
-    
+
     public void FetchStats(Character stat)
     {
-        playerSpeed = 1 + (stat.Agility.Value/50);
+        playerSpeed = 1 + (stat.Agility.Value / 50);
         playerStrength = 1 + (stat.Strength.Value / 25);
         playerDexterity = 1 + (stat.Dexterity.Value / 25);
 

@@ -10,8 +10,6 @@ public class PlayerProjectile : Projectile
     private bool pierceEnemies;
     private bool pierceEnvironment;
 
-    public GameObject player;
-
     private void Start()
     {
         FetchStats(FindObjectOfType<Character>());

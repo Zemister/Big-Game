@@ -8,7 +8,7 @@
         gameObject.name = EquipmentType.ToString() + " Slot";
     }
 
-    public override bool CanRecieveItem(Item item)
+    public override bool CanReceiveItem(Item item)
     {
         if (item == null)
             return true;

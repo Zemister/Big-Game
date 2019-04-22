@@ -13,7 +13,7 @@ public enum EquipmentType
     Accessory2,
 }
 
-public enum ClassItem
+public enum Class
 {
     class1,
     class2,
@@ -29,7 +29,7 @@ public enum Something
 
 }
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Items/Equippable Item")]
 public class EquippableItem : Item
 {
     public int HealthBonus;
@@ -58,7 +58,7 @@ public class EquippableItem : Item
     public Sprite ProjectileSprite;
     [Space]
     public EquipmentType EquipmentType;
-    public ClassItem ClassItem;
+    public Class ClassItem;
 
     public override Item GetCopy()
     {
