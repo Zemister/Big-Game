@@ -10,4 +10,9 @@ public class HealthItemEffect : UsableItemEffect
         character.Agility.BaseValue += HealthAmount;
         character.UpdateStatValues();
     }
+
+    public override string GetDescription()
+    {
+        return "Heals for " + HealthAmount + " health.";
+    }
 }

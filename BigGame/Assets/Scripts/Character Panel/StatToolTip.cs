@@ -65,7 +65,7 @@ public class StatToolTip : MonoBehaviour
                 sb.Append("%");
             }
 
-            EquippableItem item = mod.Source as EquippableItem;
+            Item item = mod.Source as Item;
 
             if (item != null)
             {

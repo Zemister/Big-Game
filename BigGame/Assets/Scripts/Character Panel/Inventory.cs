@@ -1,10 +1,7 @@
-﻿using UnityEngine.Serialization;
-using UnityEngine;
-using System;
+﻿using UnityEngine;
 
 public class Inventory : ItemContainer
 {
-    [FormerlySerializedAs("items")]
     [SerializeField] protected Item[] startingItems;
     [SerializeField] protected Transform itemsParent;
 

@@ -137,4 +137,65 @@ public class EquippableItem : Item
         c.Vitality.RemoveAllModifiersFromSource(this);
         c.Agility.RemoveAllModifiersFromSource(this);
     }
+
+    public override string GetItemType()
+    {
+        return EquipmentType.ToString();
+    }
+
+    public override string GetDescription()
+    {
+        sb.Length = 0;
+        if (WeaponDamage != 0 || WeaponDamagePercentBonus != 0 || WeaponFireRate != 0)
+        {
+            AddStat(WeaponDamage, "Weapon Damage");
+            AddStat(WeaponDamagePercentBonus, "Weapon Damage", isPercent: true);
+            AddStat(WeaponFireRate, "Fire Rate", isPercent: true);
+            AddStat(WeaponRange, "Range");
+            sb.AppendLine();
+        }
+
+        AddStat(HealthBonus, "Health");
+        AddStat(ManaBonus, "Mana");
+        AddStat(DefenceBonus, "Defence");
+        AddStat(StrengthBonus, "Strength");
+        AddStat(DexterityBonus, "Dexterity");
+        AddStat(WisdomBonus, "Wisdom");
+        AddStat(VitalityBonus, "Vitality");
+        AddStat(AgilityBonus, "Agility");
+
+        AddStat(HealthPercentBonus, "Health", isPercent: true);
+        AddStat(ManaPercentBonus, "Mana", isPercent: true);
+        AddStat(DefencePercentBonus, "Defence", isPercent: true);
+        AddStat(StrengthPercentBonus, "Strength", isPercent: true);
+        AddStat(DexterityPercentBonus, "Dexterity", isPercent: true);
+        AddStat(WisdomPercentBonus, "Wisdom", isPercent: true);
+        AddStat(VitalityPercentBonus, "Vitality", isPercent: true);
+        AddStat(AgilityPercentBonus, "Agility", isPercent: true);
+
+        return sb.ToString();
+    }
+
+    private void AddStat(float value, string statName, bool isPercent = false)
+    {
+        if (value != 0)
+        {
+            if (sb.Length > 0)
+                sb.AppendLine();
+            if (value > 0)
+                sb.Append("+");
+            if (isPercent)
+            {
+                sb.Append(value * 100);
+                sb.Append("% ");
+            }
+            else
+            {
+                sb.Append(value);
+                sb.Append(" ");
+            }
+
+            sb.Append(statName);
+        }
+    }
 }
