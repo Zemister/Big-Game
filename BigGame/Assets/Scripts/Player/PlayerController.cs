@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     private float attackSpeedCounter;
     private float attackSpeed;
 
+    private bool canShoot;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -97,41 +99,52 @@ public class PlayerController : MonoBehaviour
     //Will change this so that the prefab used is changed based on weapon equipped eventually
     private void AimAndShoot()
     {
-        //Find position of mouse (right,left,up,down)
-        Vector2 mousePosition = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
-        xAim = (mousePosition.x - shotPoint.position.x);
-        yAim = (mousePosition.y - shotPoint.position.y);
-
-        //Create way to move shotPoint in front of character here so animation looks smoother (may have to do this in the shotPoint rotation function
-
-        //Fire Projectile
-        attackSpeed = (1 / playerDexterity) / fireRate;
-        if (attackSpeedCounter <= 0)
+        if (this.GetComponent<Character>().EquipmentPanel.isActiveAndEnabled || this.GetComponent<Character>().Inventory.isActiveAndEnabled || this.GetComponent<Character>().containerIsOpen /*|| this.GetComponent<Character>().TalentTree.isActiveAndEnabled*/)
         {
-            if (Input.GetButton("Fire1"))
-            {
-                if (fireRate != 0)
-                {
-                    animator.SetBool("isAttacking", true);
-                    animator.SetFloat("xAim", xAim);
-                    animator.SetFloat("yAim", yAim);
+            canShoot = false;
+        } else
+        {
+            canShoot = true;
+        }
+        
+        if (canShoot)
+        {
+            //Find position of mouse (right,left,up,down)
+            Vector2 mousePosition = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
+            xAim = (mousePosition.x - shotPoint.position.x);
+            yAim = (mousePosition.y - shotPoint.position.y);
 
-                    Instantiate(projectilePrefab, shotPoint.position, shotPoint.rotation);
-                    attackSpeedCounter = attackSpeed;
+            //Create way to move shotPoint in front of character here so animation looks smoother (may have to do this in the shotPoint rotation function
+
+            //Fire Projectile
+            attackSpeed = (1 / playerDexterity) / fireRate;
+            if (attackSpeedCounter <= 0)
+            {
+                if (Input.GetButton("Fire1"))
+                {
+                    if (fireRate != 0)
+                    {
+                        animator.SetBool("isAttacking", true);
+                        animator.SetFloat("xAim", xAim);
+                        animator.SetFloat("yAim", yAim);
+
+                        Instantiate(projectilePrefab, shotPoint.position, shotPoint.rotation);
+                        attackSpeedCounter = attackSpeed;
+                    }
+                    else
+                    {
+                        Debug.Log("No Weapon Equipped!");
+                    }
                 }
                 else
                 {
-                    Debug.Log("No Weapon Equipped!");
+                    animator.SetBool("isAttacking", false);
                 }
             }
             else
             {
-                animator.SetBool("isAttacking", false);
+                attackSpeedCounter -= Time.deltaTime;
             }
-        }
-        else
-        {
-            attackSpeedCounter -= Time.deltaTime;
         }
     }
 

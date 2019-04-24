@@ -48,6 +48,7 @@ public class StatToolTip : MonoBehaviour
     {
         sb.Length = 0;
 
+        //right now talents display seperately need to make them display together, look at getDescription in items
         foreach (StatModifier mod in stat.StatModifiers)
         {
             if (sb.Length > 0)
@@ -71,6 +72,15 @@ public class StatToolTip : MonoBehaviour
             {
                 sb.Append(" ");
                 sb.Append(item.itemName);
+            }
+
+            TalentSlot talent = mod.Source as TalentSlot;
+
+            if (talent != null)
+            {
+                sb.Append(" ");
+                sb.Append(talent.Talent.talentName);
+                sb.Append(" Talent ");
             }
         }
         return sb.ToString();

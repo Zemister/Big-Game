@@ -208,11 +208,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ff12347a048ff4384f22a62189f45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClassCharacter: 6
+  ClassCharacter: 0
   WeaponDamage:
     BaseValue: 0
   WeaponFireRate:
     BaseValue: 0
+  WeaponRange:
+    BaseValue: 0
+  ProjectileSpeed:
+    BaseValue: 0
+  ProjectileSprite: {fileID: 0}
   Health:
     BaseValue: 0
   Mana:
@@ -229,11 +234,13 @@ MonoBehaviour:
     BaseValue: 0
   Agility:
     BaseValue: 0
-  inventory: {fileID: 0}
-  equipmentPanel: {fileID: 0}
+  Inventory: {fileID: 0}
+  EquipmentPanel: {fileID: 0}
+  TalentTree: {fileID: 0}
   statPanel: {fileID: 0}
   itemToolTip: {fileID: 0}
   draggableItem: {fileID: 0}
+  containerIsOpen: 0
 --- !u!114 &1139856600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,7 +255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 9221392251351437156}
   shotPoint: {fileID: 4668609628770339740}
-  projectilePrefab: {fileID: 7152572809976702196, guid: f23309ea8bc2c1747a8a47ec65c43c9a,
+  projectilePrefab: {fileID: 7152572809976702196, guid: e4bdfe03731a6744cb6451e403fc946d,
     type: 3}
 --- !u!114 &1139856594
 MonoBehaviour:
@@ -266,5 +273,7 @@ MonoBehaviour:
   statToolTip: {fileID: 0}
   inventoryGameObject: {fileID: 0}
   itemToolTip: {fileID: 0}
+  talentsGameObject: {fileID: 0}
   toggleInventoryKeys: 09000000
   toggleStatsKeys: 65000000
+  toggleTalentsKeys: 70000000

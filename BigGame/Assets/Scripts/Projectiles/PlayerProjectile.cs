@@ -21,6 +21,23 @@ public class PlayerProjectile : Projectile
         MoveProjectile(Vector3.up);
     }
 
+    void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        //This is enemy health
+        Enemy enemy = hitInfo.GetComponent<Enemy>();
+
+        if (hitInfo.gameObject.tag == "Enemy")
+        {
+            //add calculation for weaponDamage (weapon weaponDamage * (attack/something) mess with this till you like it
+            enemy.TakeDamage(damage);
+
+            if (!pierceEnemies)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+
     public void FetchStats(Character stat)
     {
         damage = stat.WeaponDamage.Value;

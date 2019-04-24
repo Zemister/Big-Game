@@ -8,14 +8,29 @@ public class CharacterPanelInput : MonoBehaviour
     [SerializeField] StatToolTip statToolTip;
     [SerializeField] GameObject inventoryGameObject;
     [SerializeField] ItemToolTip itemToolTip;
+    [SerializeField] GameObject talentsGameObject;
 
     [SerializeField] KeyCode[] toggleInventoryKeys;
     [SerializeField] KeyCode[] toggleStatsKeys;
+    [SerializeField] KeyCode[] toggleTalentsKeys;
 
     void Update()
     {
         ToggleInventoryPanel();
         ToggleStatsPanel();
+        ToggleTalentsPanel();
+    }
+
+    public void ToggleTalentsPanel()
+    {
+        for (int i = 0; i < toggleInventoryKeys.Length; i++)
+        {
+            if (Input.GetKeyDown(toggleTalentsKeys[i]))
+            {
+                talentsGameObject.SetActive(!talentsGameObject.activeSelf);
+                break;
+            }
+        }
     }
 
     public void ToggleInventoryPanel()
