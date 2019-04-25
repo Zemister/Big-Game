@@ -1,77 +1,27 @@
-Scripts {
+Items Folder - Will store folders with all types of items the game has
+	-Equippable Items - All items that can be equipped
+	-Misc Items - For now all other items, currency stuff etc
 
-Basic Camera - (deals with camera focus)
-Attach to Main Camera then in the scene set the target to the Player
+Prefabs - Will store all prefabs instances
 
-BasicEnemyShooting - (deals with enemy shooting)
-Attach to a shooting enemy
-create an empty game object named shotPoint and attach it to the Enemy (coords set to 0,0,0)
-Create a prefab with the texture of the projectile that you want to be shot
-set the stat time between shots to any value
+Resources - Will store all game resources
+	-animations
+	-tile editors
+	-sprites
+	-etc
 
-BasicMovement - (deals with player movement, animation, changing cursor, and aiming and shooting)
-Attach this to players
-Attach the animator of the character to the Animator variable
-attach cursor texture to cursor texture area
-hot spot varies depending on cursor
-create a prefab with projectile wish to be shot and attach it to projectile prefab
-create an empty game object named shotPoint and attach it to the Player (coords set to 0,0,0)
+Scenes - Will store all levels created
+	-sort these as needed
 
-Enemy - (deals with health of the enemy and handles taking damage)
-Attach to enemies
-set the desired Health
-
-EnemyProjectile - (Deals with enemy projectiles, when the projectile is destroyed)
-Attach this to the Enemy Projectile Prefabs
-set projectile speed and lifetime (together they make the range)
-
-FireRotation - (rotates the shotPoint of players to allow for aiming)
-Attach this to the shotPoint created for Players
-set the rotationOffset to -90 (may vary untested)
-
-
-Projectile - (Deals with player projectiles and damaging enemies, also when projectile is destroyed)
-Attach to Player Projectile Prefab
-set projectile speed and life time (this is the range together)
-set Damage to desired amount
-
-}
-
-Components {
-
-Player Projectile Prefabs - (what the player is shooting)
-Attach whichever player Projectile Script is prefered
-Attach Box Collider 2D (or whatever needed) and set to Is Trigger
-Attach Rigidbody2D, body type Dynamic, gravity 0, (Might freeze z rotation untested)
-
-Enemy Projectile Prefabs - (what enemies are shooting)
-Attach which Enemy projectile script is prefered
-Attach Box Collider 2D (or whatever needed) and set to Is Trigger
-Attach Rigidbody2D, body type Dynamic, gravity 0
-
-Players - (its a player nog)
-Add Basic Movement Script
-Add Animator
-Add Rigidbody2d with dynamic body type, 0 gravity, freeze z rotation
-Add Box Collider2d
-Attach empty game obect shotPoint set to 0,0,0 transform so that player can shoot
-
-shotPoint (Player) -
-Add Fire Rotation Script
-
-Grid - NIMBAL FILL THIS OUT IDK
-
-Enemies - (guess) FIXXXXX ENEMY COLLISION WITH PLAYER
-Add Enemy script
-Add shooting script
-Add Rigidbody2d with dynamic body type, 0 gravity, freeze z rotation
-Add Box Collider2d
-Add enemy shotPoint
-
-shotPoint (Enemy) -
-nothing here atm (eventually add where npc should aim its shots script)
-
-
-}
-
-
+Scripts - Will Store all scripts
+	-Item Slots - look into why baseitemslot exist
+		should need itemslot for all slots, and equipmentslot for equippment slots
+	
+	-Panels - stats, resource, itemcontainers, equipment
+		-stats only one exist
+		-resource only one exist
+		-item containers //look into why equipment panel isnt an itemcontainer
+			-inventory
+			-equipment
+			-stash
+		

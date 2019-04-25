@@ -1,14 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Item : MonoBehaviour
+public class Item : MonoBehaviour //handles basic item needs
 {
-    public int ID;
-    public string type;
-    public string description;
-    public Sprite icon;
-    public bool pickedUp;
-
-
+    
 }
