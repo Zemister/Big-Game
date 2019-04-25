@@ -29,6 +29,7 @@ public class Character : MonoBehaviour
     public EquipmentPanel EquipmentPanel;
     public TalentContainer TalentTree;
     public StatPanel statPanel;
+    //public PotionPanel potionPanel;
 
     [Header("Serialize Field")]
     [SerializeField] ItemToolTip itemToolTip;
@@ -118,6 +119,7 @@ public class Character : MonoBehaviour
         }
     }
     */
+
     private void InventoryRightClick(BaseItemSlot itemSlot)
     {
         if (itemSlot.Item is EquippableItem)
@@ -125,17 +127,13 @@ public class Character : MonoBehaviour
             Equip((EquippableItem)itemSlot.Item);
         }
         
+        /*
         else if (itemSlot.Item is UsableItem)
         {
             UsableItem usableItem = (UsableItem)itemSlot.Item;
             usableItem.Use(this);
-
-            if (usableItem.IsConsumable)
-            {
-                Inventory.RemoveItem(usableItem);
-                usableItem.Destroy();
-            }
         }
+        */     
     }
 
     private void EquipmentPanelRightClick(BaseItemSlot itemSlot)

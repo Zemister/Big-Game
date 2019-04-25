@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73f07926ed1291449888f0bd13faf08c, type: 3}
-  m_Name: Stat Buff temporary
+  m_Name: New Stat Buff Item Effect
   m_EditorClassIdentifier: 
   StrengthBuff: 1
   DefenceBuff: 1
-  AgilityBuff: 5
-  WisdomBuff: 5
-  VitalityBuff: 5
-  DexterityBuff: 5
-  Duration: 10
+  AgilityBuff: 1
+  WisdomBuff: 1
+  VitalityBuff: 1
+  DexterityBuff: 1
+  Duration: 5
+  Cooldown: 5
+  isUsable: 1

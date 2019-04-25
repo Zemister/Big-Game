@@ -7,6 +7,15 @@ public class PlayerController : MonoBehaviour
     private float xAim, yAim;
     public Transform projectilePrefab;
 
+    [SerializeField] public EquipmentSlot potionOne;
+    [SerializeField] public EquipmentSlot potionTwo;
+    [SerializeField] public EquipmentSlot potionThree;
+    [SerializeField] public EquipmentSlot potionFour;
+    public float cooldownCounterOne;
+    public float cooldownCounterTwo;
+    public float cooldownCounterThree;
+    public float cooldownCounterFour;
+
     private Rigidbody2D body;
     private float xInput, yInput;
     private bool isMoving;
@@ -47,6 +56,66 @@ public class PlayerController : MonoBehaviour
         FetchStats(this.gameObject.GetComponent<Character>());
         Movement();
         AimAndShoot();
+        DrinkPotion();
+    }
+
+    private void DrinkPotion()
+    {
+        if (potionOne.Item != null && cooldownCounterOne <= 0)
+        {
+            EquippableItem potion = (EquippableItem)potionOne.Item;
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                potion.Use(this.GetComponent<Character>());
+                cooldownCounterOne = potion.Cooldown;
+            }
+        }
+        else
+        {
+            cooldownCounterOne -= Time.deltaTime;
+        }
+
+        if (potionTwo.Item != null && cooldownCounterTwo <= 0)
+        {
+            EquippableItem potion = (EquippableItem)potionTwo.Item;
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                potion.Use(this.GetComponent<Character>());
+                cooldownCounterTwo = potion.Cooldown;
+            }
+        }
+        else
+        {
+            cooldownCounterTwo -= Time.deltaTime;
+        }
+
+        if (potionThree.Item != null && cooldownCounterThree <= 0)
+        {
+            EquippableItem potion = (EquippableItem)potionThree.Item;
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                potion.Use(this.GetComponent<Character>());
+                cooldownCounterThree = potion.Cooldown;
+            }
+        }
+        else
+        {
+            cooldownCounterThree -= Time.deltaTime;
+        }
+
+        if (potionFour.Item != null && cooldownCounterFour <= 0)
+        {
+            EquippableItem potion = (EquippableItem)potionFour.Item;
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                potion.Use(this.GetComponent<Character>());
+                cooldownCounterFour = potion.Cooldown;
+            }
+        }
+        else
+        {
+            cooldownCounterFour -= Time.deltaTime;
+        }
     }
 
     private void Movement()
@@ -102,11 +171,12 @@ public class PlayerController : MonoBehaviour
         if (this.GetComponent<Character>().EquipmentPanel.isActiveAndEnabled || this.GetComponent<Character>().Inventory.isActiveAndEnabled || this.GetComponent<Character>().containerIsOpen /*|| this.GetComponent<Character>().TalentTree.isActiveAndEnabled*/)
         {
             canShoot = false;
-        } else
+        }
+        else
         {
             canShoot = true;
         }
-        
+
         if (canShoot)
         {
             //Find position of mouse (right,left,up,down)

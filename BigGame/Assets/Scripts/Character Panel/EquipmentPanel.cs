@@ -37,6 +37,20 @@ public class EquipmentPanel : MonoBehaviour
     //check item.ClassEquipment and compare it to character.class or something
     public bool AddItem(EquippableItem item, out EquippableItem previousItem)
     {
+        if(item.EquipmentType == EquipmentType.Potion) //if the item is a potion
+        {
+            for (int i = 0; i < equipmentSlots.Length; i++) //run through all equipment slots
+            {
+                if (equipmentSlots[i].Item == null && equipmentSlots[i].EquipmentType == item.EquipmentType) //if the equipment slot is null
+                {
+                    previousItem = (EquippableItem)equipmentSlots[i].Item; //replace the previous item
+                    equipmentSlots[i].Item = item; //this slot is = to the item
+                    equipmentSlots[i].Amount = 1; //amount = 1
+                    return true;
+                }
+            }
+        }
+
         for (int i = 0; i < equipmentSlots.Length; i++)
         {
             if (equipmentSlots[i].EquipmentType == item.EquipmentType)

@@ -257,6 +257,10 @@ MonoBehaviour:
   shotPoint: {fileID: 4668609628770339740}
   projectilePrefab: {fileID: 7152572809976702196, guid: e4bdfe03731a6744cb6451e403fc946d,
     type: 3}
+  potionOne: {fileID: 0}
+  potionTwo: {fileID: 0}
+  potionThree: {fileID: 0}
+  potionFour: {fileID: 0}
 --- !u!114 &1139856594
 MonoBehaviour:
   m_ObjectHideFlags: 0

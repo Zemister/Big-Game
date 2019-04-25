@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-using CharacterStats;
+﻿using CharacterStats;
+using System.Collections;
+using UnityEngine;
 
 public enum EquipmentType
 {
@@ -11,6 +12,7 @@ public enum EquipmentType
     Boots,
     Accessory1,
     Accessory2,
+    Potion,
 }
 
 public enum Class
@@ -26,7 +28,6 @@ public enum Class
 
 public enum Something
 {
-
 }
 
 [CreateAssetMenu(menuName = "Items/Equippable Item")]
@@ -40,8 +41,10 @@ public class EquippableItem : Item
     public int WisdomBonus;
     public int VitalityBonus;
     public int AgilityBonus;
+
     [Space]
     public float HealthPercentBonus;
+
     public float ManaPercentBonus;
     public float DefencePercentBonus;
     public float StrengthPercentBonus;
@@ -49,15 +52,33 @@ public class EquippableItem : Item
     public float WisdomPercentBonus;
     public float VitalityPercentBonus;
     public float AgilityPercentBonus;
+
     [Space]
     public int WeaponDamage;
+
     public float WeaponDamagePercentBonus;
     public float WeaponFireRate;
     public float WeaponRange;
     public float ProjectileSpeed;
     public Sprite ProjectileSprite;
+
+    [Space]
+    public float Cooldown;
+
+    public float Duration;
+    public bool canUse;
+    public int Health;
+    public int Mana;
+    public int StrengthBuff;
+    public int DefenceBuff;
+    public int AgilityBuff;
+    public int WisdomBuff;
+    public int VitalityBuff;
+    public int DexterityBuff;
+
     [Space]
     public EquipmentType EquipmentType;
+
     public Class ClassItem;
 
     public override Item GetCopy()
@@ -136,6 +157,30 @@ public class EquippableItem : Item
         c.Wisdom.RemoveAllModifiersFromSource(this);
         c.Vitality.RemoveAllModifiersFromSource(this);
         c.Agility.RemoveAllModifiersFromSource(this);
+    }
+
+    public virtual void Use(Character c)
+    {
+        StatModifier statStrengthModifier = new StatModifier(StrengthBuff, StatModType.Flat, this);
+        c.Strength.AddModifier(statStrengthModifier);
+        c.StartCoroutine(RemoveBuff(c, statStrengthModifier, Duration));
+        StatModifier statDefenceModifier = new StatModifier(DefenceBuff, StatModType.Flat, this);
+        c.Defence.AddModifier(statDefenceModifier);
+        c.StartCoroutine(RemoveBuff(c, statDefenceModifier, Duration));
+
+        c.UpdateStatValues();
+    }
+
+    private static IEnumerator RemoveBuff(Character character, StatModifier statModifier, float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        character.Strength.RemoveModifier(statModifier);
+        character.Defence.RemoveModifier(statModifier);
+        character.Agility.RemoveModifier(statModifier);
+        character.Wisdom.RemoveModifier(statModifier);
+        character.Vitality.RemoveModifier(statModifier);
+        character.Dexterity.RemoveModifier(statModifier);
+        character.UpdateStatValues();
     }
 
     public override string GetItemType()
