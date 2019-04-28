@@ -1,0 +1,35 @@
+[
+	{
+		"Health": 100, 
+		"Mana": 100, 
+		"Strength": 1, 
+		"Defence": 0, 
+		"Dexterity": 0, 
+		"Agility": 0, 
+		"Wisdom": 0, 
+		"Vitality": 0, 
+		"ExpToLevel": 20
+	},
+	{
+		"Health": 200, 
+		"Mana": 200, 
+		"Strength": 1, 
+		"Defence": 0, 
+		"Dexterity": 0, 
+		"Agility": 0, 
+		"Wisdom": 0, 
+		"Vitality": 0, 
+		"ExpToLevel": 40
+	},
+	{
+		"Health": 300, 
+		"Mana": 300, 
+		"Strength": 1, 
+		"Defence": 0, 
+		"Dexterity": 0, 
+		"Agility": 0, 
+		"Wisdom": 0, 
+		"Vitality": 0, 
+		"ExpToLevel": 60
+	},
+]
